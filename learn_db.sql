@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cache` (
-  `key` varchar(255) NOT NULL,
+  `key` varchar(191) NOT NULL,
   `value` mediumtext NOT NULL,
   `expiration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -40,8 +40,8 @@ CREATE TABLE `cache` (
 --
 
 CREATE TABLE `cache_locks` (
-  `key` varchar(255) NOT NULL,
-  `owner` varchar(255) NOT NULL,
+  `key` varchar(191) NOT NULL,
+  `owner` varchar(191) NOT NULL,
   `expiration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -53,9 +53,9 @@ CREATE TABLE `cache_locks` (
 
 CREATE TABLE `categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(191) NOT NULL,
   `type` enum('class','subject','sub_subject','section','topic') NOT NULL,
-  `slug` varchar(255) NOT NULL,
+  `slug` varchar(191) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -80,11 +80,11 @@ INSERT INTO `categories` (`id`, `name`, `type`, `slug`, `created_at`, `updated_a
 
 CREATE TABLE `contests` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `image` varchar(191) NOT NULL,
+  `title` varchar(191) NOT NULL,
+  `description` varchar(191) NOT NULL,
   `content` text NOT NULL,
-  `type` varchar(255) NOT NULL,
+  `type` varchar(191) NOT NULL,
   `exam_id` bigint(20) UNSIGNED NOT NULL,
   `start_time` datetime NOT NULL,
   `end_time` datetime NOT NULL,
@@ -107,13 +107,13 @@ INSERT INTO `contests` (`id`, `image`, `title`, `description`, `content`, `type`
 
 CREATE TABLE `exams` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `file` varchar(255) NOT NULL,
+  `title` varchar(191) NOT NULL,
+  `file` varchar(191) NOT NULL,
   `subject_id` bigint(20) UNSIGNED NOT NULL,
   `rating` int(11) NOT NULL DEFAULT 0,
   `year` int(11) NOT NULL,
-  `province` varchar(255) NOT NULL,
-  `slug` varchar(255) NOT NULL,
+  `province` varchar(191) NOT NULL,
+  `slug` varchar(191) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -133,15 +133,15 @@ INSERT INTO `exams` (`id`, `title`, `file`, `subject_id`, `rating`, `year`, `pro
 
 CREATE TABLE `exam_rooms` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(191) NOT NULL,
   `teacher_id` bigint(20) UNSIGNED NOT NULL,
   `subject_id` bigint(20) UNSIGNED NOT NULL,
   `exam_id` bigint(20) UNSIGNED NOT NULL,
-  `password` varchar(255) DEFAULT NULL,
+  `password` varchar(191) DEFAULT NULL,
   `exam_time` datetime NOT NULL,
   `price` decimal(10,2) NOT NULL DEFAULT 0.00,
   `rating` int(11) NOT NULL DEFAULT 0,
-  `slug` varchar(255) NOT NULL,
+  `slug` varchar(191) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -169,7 +169,7 @@ CREATE TABLE `exam_room_students` (
 
 CREATE TABLE `exercises` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL,
+  `title` varchar(191) NOT NULL,
   `content` text DEFAULT NULL,
   `subject_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -191,7 +191,7 @@ INSERT INTO `exercises` (`id`, `title`, `content`, `subject_id`, `created_at`, `
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
+  `uuid` varchar(191) NOT NULL,
   `connection` text NOT NULL,
   `queue` text NOT NULL,
   `payload` longtext NOT NULL,
@@ -207,7 +207,7 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `queue` varchar(255) NOT NULL,
+  `queue` varchar(191) NOT NULL,
   `payload` longtext NOT NULL,
   `attempts` tinyint(3) UNSIGNED NOT NULL,
   `reserved_at` int(10) UNSIGNED DEFAULT NULL,
@@ -222,8 +222,8 @@ CREATE TABLE `jobs` (
 --
 
 CREATE TABLE `job_batches` (
-  `id` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `id` varchar(191) NOT NULL,
+  `name` varchar(191) NOT NULL,
   `total_jobs` int(11) NOT NULL,
   `pending_jobs` int(11) NOT NULL,
   `failed_jobs` int(11) NOT NULL,
@@ -242,7 +242,7 @@ CREATE TABLE `job_batches` (
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(191) NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -268,8 +268,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `token` varchar(191) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -280,7 +280,7 @@ CREATE TABLE `password_reset_tokens` (
 --
 
 CREATE TABLE `sessions` (
-  `id` varchar(255) NOT NULL,
+  `id` varchar(191) NOT NULL,
   `user_id` bigint(20) UNSIGNED DEFAULT NULL,
   `ip_address` varchar(45) DEFAULT NULL,
   `user_agent` text DEFAULT NULL,
@@ -296,10 +296,10 @@ CREATE TABLE `sessions` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `email` varchar(191) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
+  `password` varchar(191) NOT NULL,
   `role` enum('super_admin','admin','instructor','student','parent') NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
