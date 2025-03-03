@@ -13,9 +13,11 @@
             background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1));
         }
     </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
+
     <div class="wrapper">
 
         <div class="main-panel">
@@ -36,7 +38,6 @@
     <script src="https://kit.fontawesome.com/bf7b127d49.js" crossorigin="anonymous"></script>
 
     <script src={{ asset('assets/js/main.js') }}></script>
-
     @yield('scripts')
 </body>
 

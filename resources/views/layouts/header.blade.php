@@ -1,6 +1,6 @@
 <header class="bg-teal-800 text-white">
     <div class="container mx-auto flex items-center justify-between py-4 px-6">
-        <div class="text-2xl font-bold"><a href="{{ route('home') }}" class="text-red-500">LOGO</a></div>
+        <div class="text-2xl font-bold"><a href="{{ route('home') }}" class="text-red-500">LOGO 1</a></div>
         <nav class="flex items-center space-x-6">
             <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded-full">Trang chủ</a>
             <div class="relative group">
