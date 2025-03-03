@@ -23,9 +23,11 @@
         }
 
     </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
+
     <div class="wrapper">
 
         <div class="main-panel">
@@ -48,7 +50,6 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> --}}
 
     <script src={{ asset('assets/js/main.js') }}></script>
-
     @yield('scripts')
 </body>
 
