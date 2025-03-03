@@ -1,32 +1,51 @@
 <footer class="bg-teal-900 text-white py-8">
-    <div class="container mx-auto flex flex-wrap justify-between px-8">
-        <!-- Logo và thông tin công ty -->
-        <div class="flex items-center space-x-4 w-1/3">
-            <div class="w-20 h-20 bg-gray-300 rounded-full"></div>
-            <div>
-                <h3 class="text-lg font-bold">TÊN CÔNG TY</h3>
-                <p class="text-sm">Công ty TNHH Tên Công Ty</p>
-                <h3 class="text-lg font-bold mt-2">TRỤ SỞ CHÍNH</h3>
-                <p class="text-sm">Địa chỉ nhà, tên đường, phường, quận, tỉnh</p>
+    <div class="grid grid-cols-5">
+        <div>
+            <div class="h-20 w-200 bg-red-600">
+                logo
             </div>
-        </div>
-
-        <!-- Menu -->
-        <div class="w-1/3">
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:underline">Trang chủ</a></li>
-                <li><a href="#" class="hover:underline">Đề thi</a></li>
-                <li><a href="#" class="hover:underline">Luyện tập</a></li>
-                <li><a href="#" class="hover:underline">Cuộc thi</a></li>
-                <li><a href="#" class="hover:underline">Thông tin</a></li>
+            <ul>
+                <li>Giới thiệu</li>
+                <li>Tổng quan chung</li>
+                <li>Tổng quan chung</li>
             </ul>
         </div>
+        <div>
+            <h4>Thông tin</h4>
+            <ul>
+                <li>Trang chủ</li>
+                <li>Đề thi</li>
+                <li>Luyện tập</li>
+                <li>Cuộc thi</li>
+                <li>Thông tin </li>
+            </ul>
+        </div>
+        <div>
+            <h4>Mạng xã hội</h4>
+            <div>
 
-        <!-- Liên hệ -->
-        <div class="w-1/3">
-            <h3 class="text-lg font-bold">LIÊN HỆ</h3>
-            <p class="text-sm">Hotline: 012.3456.6789</p>
-            <p class="text-sm">Email: emailcongty@gmail.com</p>
+            </div>
+        </div>
+        <div>
+            <h4>Tên công ty</h4>
+            <p>Công ty TNHH Tên Công ty</p>
+            <h4>Trụ sở chính</h4>
+            <p>Địa chỉ nhà,tên đường, phuờng, quận, tỉnh</p>
+        </div>
+        <div>
+            <div>
+                <i></i>
+                <p>Liên hệ</p>
+            </div>
+            <div>
+                <i></i>
+                (+84) 0000000
+            </div>
+            <div>
+                <i></i>
+                <p>Bản đồ và chỉ dẫn</p>
+            </div>
+
         </div>
     </div>
 
