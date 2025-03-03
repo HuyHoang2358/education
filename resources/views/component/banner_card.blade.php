@@ -20,9 +20,3 @@
         </div>
     </div>
 </div>
-
-<style>
-    .title{
-        -webkit-text-stroke: 2.5px #124D59;
-    }
-</style>

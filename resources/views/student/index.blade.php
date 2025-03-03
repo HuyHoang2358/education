@@ -18,7 +18,8 @@
     <!-- Mô tả khóa học -->
     <section class="container mx-auto px-6 py-12 bg-slate-100 w-full">
         <h2 class="text-center text-[28px] font-bold">Để thi thử tốt nghiệp THPT Quốc Gia các môn</h2>
-        <p class="text-center text-gray-600 mt-2 mb-5 text-[24px]">Hàng ngàn câu hỏi thử nghiệm giúp bạn làm quen với cấu trúc và
+        <p class="text-center text-gray-600 mt-2 mb-5 text-[24px]">Hàng ngàn câu hỏi thử nghiệm giúp bạn làm quen với cấu
+            trúc và
             nội dung
             thi chính thức.</p>
 
@@ -65,7 +66,8 @@
                                 <a class="group" href="">
                                     <div class="overflow-hidden	rounded-md">
                                         <img src="{{ asset('/assets/img/home/' . $subject['img'] . '.png') }}"
-                                        alt="{{ $subject['name'] }}" class="w-[100%] transform transition-transform duration-300 group-hover:scale-110">
+                                            alt="{{ $subject['name'] }}"
+                                            class="w-[100%] transform transition-transform duration-300 group-hover:scale-110">
                                     </div>
                                     <h3 class="font-semibold text-[24px] mt-2">{{ $subject['name'] }}</h3>
                                     <p class="text-gray-500 text-lg mt-1">{{ $subject['desc'] }}</p>
@@ -77,16 +79,23 @@
                 <div class="swiper-pagination-2 flex justify-center p-5"></div>
             </div>
             <div class="inset-y-1/3 -right-20 absolute pt-5">
-                <div class="swiper-button-next-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full"><i class="fa-solid fa-chevron-right"></i></div>
+                <div
+                    class="swiper-button-next-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
             </div>
             <div class="inset-y-1/3 -left-20 absolute pt-5">
-                <div class="swiper-button-prev-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full"><i class="fa-solid fa-chevron-left"></i></div>
+                <div
+                    class="swiper-button-prev-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Thống kê -->
-    <section class="bg-fixed bg-center bg-cover flex justify-center py-20" style="background-image: url('{{ asset('/assets/img/home/banner_blank.jpg') }}')">
+    <section class="bg-fixed bg-center bg-cover flex justify-center py-20"
+        style="background-image: url('{{ asset('/assets/img/home/banner_blank.jpg') }}')">
         <div class="container flex flex-col gap-10 px-12">
             <div class="text-center text-[28px] font-medium text-[#124D59]">
                 Nền tảng luyện thi của chúng tôi có gì?
@@ -115,7 +124,7 @@
                         3000+
                     </div>
                     <div class="text-3xl text-[#124D59]">
-                        Đề luyện thi giúp bạn kiểm tra mà không lo  trùng lặp
+                        Đề luyện thi giúp bạn kiểm tra mà không lo trùng lặp
                     </div>
                 </div>
 
@@ -124,33 +133,66 @@
     </section>
 
     <!-- Lợi ích khi ôn luyện -->
+    @php
+
+        $benefits = [
+            [
+                'name' => 'Lập kế hoạch học tập',
+                'img' => 'hh',
+                'desc' =>
+                    'Chủ động lập kế hoạch học tập hợp lý khi biết điểm mạnh yếu qua từng bài thi thử và bài luyện.',
+            ],
+            [
+                'name' => 'Mục tiêu rõ ràng',
+                'img' => 'rr',
+                'desc' => 'Mục tiêu học tập rõ ràng với các chủ đề đã được tổng hợp sẵn từ chương trình học mới nhất.',
+            ],
+            [
+                'name' => 'Theo sát kết quả',
+                'img' => 'sl',
+                'desc' => 'Học từ những sai lầm với những gợi ý thống kê quá trình học chi tiết.',
+            ],
+            [
+                'name' => 'Theo sát kết quả',
+                'img' => 'sl',
+                'desc' => 'Học từ những sai lầm với những gợi ý thống kê quá trình học chi tiết.',
+            ],
+        ];
+
+    @endphp
     <section class="container mx-auto py-12">
         <div class="text-center">
             <h2 class="text-center text-[28px] font-bold">Lợi ích khi luyện thi cùng chúng tôi</h2>
-            <p class="text-[24px]">Vô vàn đề thi thử với đa dạng cấp độ từ dễ đến khó đáp ứng trình độ hiện tại của bạn.</p>
+            <p class="text-[24px] mt-2 mb-5 text-gray-600">Vô vàn đề thi thử với đa dạng cấp độ từ dễ đến khó đáp ứng trình
+                độ hiện tại của bạn.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="{{ asset('/assets/img/home/hh.png') }}" alt="Kế hoạch" class="mx-auto">
-                <h3 class="font-bold mt-2 text-[26px] text-[#0F1726]">Lập kế hoạch học tập</h3>
-                <p class="pt-2 text-[#525266] text-[22px]">Chủ động lập kế hoạch học tập
-                    hợp lý khi biết điểm mạnh yếu
-                    qua từng bài thi thử và bài luyện.</p>
+        <div class="relative">
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    @foreach ($benefits as $benefit)
+                        <div class="swiper-slide h-[350px]">
+                            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                                <img src="{{ asset('/assets/img/home/' . $benefit['img'] . '.png') }}"
+                                    alt="{{ $benefit['name'] }}" class="mx-auto">
+                                <h3 class="font-bold mt-2 text-[26px] text-[#0F1726]">{{ $benefit['name'] }}</h3>
+                                <p class="pt-2 text-[#525266] text-[22px]">{{ $benefit['desc'] }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="swiper-pagination-3 flex justify-center p-5"></div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="{{ asset('/assets/img/home/rr.png') }}" alt="Mục tiêu" class="mx-auto">
-                <h3 class="font-bold mt-2 text-[26px]">Mục tiêu rõ ràng</h3>
-                <p class="pt-2 text-[#525266] text-[22px]">Mục tiêu học tập rõ ràng với
-                    các chủ đề đã được tổng hợp
-                    sẵn từ chương trình học mới
-                    nhất.</p>
+            <div class="inset-y-1/3 -right-20 absolute pt-5">
+                <div
+                    class="swiper-button-next-unique-2 w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                <img src="{{ asset('/assets/img/home/sl.png') }}" alt="Kết quả" class="mx-auto">
-                <h3 class="font-bold mt-2 text-[26px]">Theo sát kết quả</h3>
-                <p class="pt-2 text-[#525266] text-[22px]">Học từ những sai lầm với những
-                    gợi ý thống kê quá trình học chi
-                    tiết.</p>
+            <div class="inset-y-1/3 -left-20 absolute pt-5">
+                <div
+                    class="swiper-button-prev-unique-2 w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
             </div>
         </div>
     </section>
@@ -159,7 +201,31 @@
     <section class="py-12">
         <div class="bg-white rounded-lg container mx-auto" style="box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);">
             <div class="grid grid-cols-2 gap-4 place-items-center py-24">
-                <img src="{{ asset('/assets/img/home/frame.png') }}" alt="">
+                <div class="h-full flex flex-col justify-between">
+                    <div>
+                        <div class="text-5xl font-semibold text-[#124D59] uppercase">Đăng ký tài khoản</div>
+                        <span class="text-9xl font-black uppercase text-[#FBFFCC] title-2">Free</span>
+                    </div>
+                    <div class="ml-14">
+                        <ul class="list-disc text-[#525266] font-medium text-2xl flex flex-col gap-3">
+                            <li>Xem giải thích miễn phí</li>
+                            <li>Biết điểm mạnh / yếu sau mỗi bài thi</li>
+                            <li>Kho tài nguyên đa dạng</li>
+                            <li>Cộng đồng lớn hỗ trợ nhiệt tình</li>
+                        </ul>
+                    </div>
+                    <button
+                        class="group text-xl font-semibold rounded-full w-fit relative inline-flex h-14 items-center justify-center overflow-hidden px-5 bg-[#0B8493]">
+                        <div
+                            class="inline-flex h-14 translate-y-0 items-center justify-center px-6 text-neutral-50 transition duration-500 group-hover:-translate-y-[150%]">
+                            Đăng ký tài khoản ngay</div>
+                        <div
+                            class="absolute inline-flex h-14 w-full translate-y-[100%] items-center justify-center text-neutral-50 transition duration-500 group-hover:translate-y-0">
+                            <span
+                                class="absolute h-full w-full translate-y-full skew-y-6 scale-y-0 bg-orange-400 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span><span
+                                class="z-10">Đăng ký tài khoản ngay</span></div>
+                    </button>
+                </div>
                 <img src="{{ asset('/assets/img/home/frame-1.png') }}" alt="">
             </div>
         </div>
@@ -186,8 +252,8 @@
             });
 
             var swiper = new Swiper(".mySwiper2", {
-                slidesPerView: 4,
-                spaceBetween: 20,
+                slidesPerView: 1,
+                spaceBetween: 10,
                 navigation: {
                     nextEl: ".swiper-button-next-unique",
                     prevEl: ".swiper-button-prev-unique",
@@ -196,7 +262,41 @@
                     el: ".swiper-pagination-2",
                     clickable: true,
                 },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1049: {
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                    },
+                },
             });
+
+            var swiper = new Swiper(".mySwiper3", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: ".swiper-button-next-unique-2",
+                    prevEl: ".swiper-button-prev-unique-2",
+                },
+                pagination: {
+                    el: ".swiper-pagination-3",
+                    clickable: true,
+                },
+                breakpoints: {
+                    1049: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+
 
         });
     </script>
