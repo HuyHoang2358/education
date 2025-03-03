@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href={{ asset('assets/css/main.css') }} />
     <script src="{{ asset('assets/js/core/tailwind.min.js') }}"></script>
+    <style>
+        .swiper-pagination-bullet-active{
+            background-color: rgb(251 146 60 / var(--tw-bg-opacity, 1));
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +21,7 @@
         <div class="main-panel">
             @include('layouts.header')
 
-            <div class="page-inner">
+            <div class="page-inner bg-slate-100">
                 @yield('content')
             </div>
 
@@ -28,6 +33,7 @@
     <script src={{ asset('assets/js/core/jquery-3.7.1.min.js') }}></script>
     <script src={{ asset('assets/js/core/popper.min.js') }}></script>
     <script src={{ asset('assets/js/core/bootstrap.min.js') }}></script>
+    <script src="https://kit.fontawesome.com/bf7b127d49.js" crossorigin="anonymous"></script>
 
     <script src={{ asset('assets/js/main.js') }}></script>
 
