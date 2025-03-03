@@ -26,3 +26,4 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 Route::get('/', [StudentDashboardController::class, 'index'])->name('home');
 Route::get('/de-thi', [ExerciseController::class, 'index'])->name('exercise.index');
 Route::get('/luyen-tap', [PracticeController::class, 'index'])->name('practice.index');
+Route::get('/x', [StudentDashboardController::class, 'x'])->name('practice.x');
