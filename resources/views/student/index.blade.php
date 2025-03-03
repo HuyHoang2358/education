@@ -5,16 +5,18 @@
     <section class="text-white text-center relative">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="{{ asset('/assets/img/home/banner.png') }}" alt="Banner 1" class="w-full rounded-lg shadow-lg">
-                </div>
-                <div class="swiper-slide">
+                @for ($i = 0; $i < 3; $i++)
+                    <div class="swiper-slide">
+                        @include('component.banner_card')
+                    </div>
+                @endfor
+                {{-- <div class="swiper-slide">
                     <img src="{{ asset('/assets/img/home/banner.png') }}" alt="Banner 2" class="w-full rounded-lg shadow-lg">
                 </div>
                 <div class="swiper-slide">
                     <img src="{{ asset('/assets/img/home/banner.png') }}" alt="Banner 3"
                         class="w-full rounded-lg shadow-lg">
-                </div>
+                </div> --}}
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -122,10 +124,10 @@
         document.addEventListener("DOMContentLoaded", function() {
             var swiper = new Swiper(".mySwiper", {
                 loop: true,
-                autoplay: {
-                    delay: 3000, // Tự động chuyển sau 3s
-                    disableOnInteraction: false,
-                },
+                // autoplay: {
+                //     delay: 3000, // Tự động chuyển sau 3s
+                //     disableOnInteraction: false,
+                // },
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
