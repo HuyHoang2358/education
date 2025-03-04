@@ -80,13 +80,13 @@
             </div>
             <div class="inset-y-1/3 -right-20 absolute pt-5">
                 <div
-                    class="swiper-button-next-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    class="hover:scale-125 duration-300 swiper-button-next-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
             <div class="inset-y-1/3 -left-20 absolute pt-5">
                 <div
-                    class="swiper-button-prev-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    class="hover:scale-125 duration-300  swiper-button-prev-unique w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
             </div>
@@ -184,13 +184,13 @@
             </div>
             <div class="inset-y-1/3 -right-20 absolute pt-5">
                 <div
-                    class="swiper-button-next-unique-2 w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    class="hover:scale-125 duration-300  swiper-button-next-unique-2 w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
             <div class="inset-y-1/3 -left-20 absolute pt-5">
                 <div
-                    class="swiper-button-prev-unique-2 w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
+                    class="hover:scale-125 duration-300  swiper-button-prev-unique-2 w-100 h-100 text-3xl z-50 bg-white text-orange-400 px-4 py-2 rounded-full">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
             </div>
@@ -204,7 +204,7 @@
                 <div class="h-full flex flex-col justify-between">
                     <div>
                         <div class="text-5xl font-semibold text-[#124D59] uppercase">Đăng ký tài khoản</div>
-                        <span class="text-9xl font-black uppercase text-[#FBFFCC] title-2">Free</span>
+                        <span class="shimmer text-9xl font-black uppercase text-[#FBFFCC] title-2">Free</span>
                     </div>
                     <div class="ml-14">
                         <ul class="list-disc text-[#525266] font-medium text-2xl flex flex-col gap-3">
@@ -226,7 +226,12 @@
                                 class="z-10">Đăng ký tài khoản ngay</span></div>
                     </button>
                 </div>
-                <img src="{{ asset('/assets/img/home/frame-1.png') }}" alt="">
+                <div class="relative pr-20">
+                    <img class="absolute top-0 left-0 animate-asyncfloat" src="{{ asset('/assets/img/home/item1.png') }}" alt="">
+                    <img class="absolute bottom-0 right-10 animate-asyncfloat" src="{{ asset('/assets/img/home/item3.png') }}" alt="">
+                    <img class="absolute top-0 right-0 animate-asyncfloat" src="{{ asset('/assets/img/home/item2.png') }}" alt="">
+                    <img class="animate-float" src="{{ asset('/assets/img/home/tech_guy.png') }}" alt="">
+                </div>
             </div>
         </div>
     </section>
