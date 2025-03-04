@@ -125,6 +125,7 @@
                 @yield('content')
                 @yield('contest')
                 @yield('contest-detail')
+                @yield('contest-rank')
             </div>
 
             @include('layouts.footer')

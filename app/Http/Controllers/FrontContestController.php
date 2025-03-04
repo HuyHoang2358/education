@@ -18,4 +18,10 @@ class FrontContestController extends Controller
 
     }
 
+    public function rank($slug){
+
+        return view('student.contest.rank', ['slug' => $slug]);
+
+    }
+
 }
