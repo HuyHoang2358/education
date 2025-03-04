@@ -92,6 +92,22 @@
             animation: openup 0.25s ease-out reverse;
         }
 
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-float-in {
+            animation: floatIn 0.75s ease-out forwards;
+        }
+
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -108,6 +124,7 @@
             <div class="page-inner bg-slate-100">
                 @yield('content')
                 @yield('contest')
+                @yield('contest-detail')
             </div>
 
             @include('layouts.footer')

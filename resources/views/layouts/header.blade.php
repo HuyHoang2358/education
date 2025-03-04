@@ -3,11 +3,12 @@
         {{-- <div class="text-2xl font-bold"><a href="{{ route('home') }}" class="text-red-500">LOGO 1</a></div> --}}
         <img src="{{asset('/assets/img/home/LOGO.png')}}" alt="">
         <div class="flex items-center gap-8 h-full">
-            <div class="py-5">
-                <a href="#" class="bg-orange-500 text-white font-medium rounded-full py-2 px-3">Trang chủ</a>
-            </div>
 
-            <div class="relative group hover:text-orange-400 font-medium py-5 px-3">
+            <a href="{{ route('home') }}" class="{{ Route::currentRouteName() == 'home' ? 'bg-orange-500 text-white font-medium rounded-full py-2 px-3 hover:text-white' : 'relative hover:cursor-pointer group font-medium py-5 hover:text-orange-400' }}">
+                Trang chủ
+            </a>
+
+            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5 px-3">
                 Đề thi <i class="fa-solid fa-chevron-down text-md"></i>
                 <div class="absolute group-hover:flex left-0 mt-5 hidden bg-white text-black rounded shadow z-50 p-2">
                     <div>
@@ -40,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="relative group hover:text-orange-400 font-medium py-5">
+            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
                 Luyện tập <i class="fa-solid fa-chevron-down text-md"></i>
                 <div class="p-2 absolute left-0 mt-5 hidden group-hover:grid grid-cols-3 w-[30rem] bg-white text-black rounded shadow z-50">
                     <div class="border-r border-gray-200 px-1">
@@ -64,15 +65,15 @@
                 </div>
             </div>
 
-            <div class="relative group hover:text-orange-400 font-medium py-5">
+            <a href="{{ route('contest.index') }}" class="{{ Str::startsWith(Route::currentRouteName(), 'contest') ? 'bg-orange-500 text-white font-medium rounded-full py-2 px-3 hover:text-white' : 'relative hover:cursor-pointer group font-medium py-5 hover:text-orange-400' }}">
                 Cuộc thi
-            </div>
+            </a>
 
-            <div class="relative group hover:text-orange-400 font-medium py-5">
+            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
                 Phòng luyện tập
             </div>
 
-            <div class="relative group hover:text-orange-400 font-medium py-5">
+            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
                 Thông tin <i class="fa-solid fa-chevron-down text-md"></i>
                 <div class="absolute left-0 mt-5 w-60 hidden group-hover:block bg-white text-black p-2 rounded shadow z-50">
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Về chúng tôi</a>
@@ -82,27 +83,10 @@
                 </div>
             </div>
 
-            <div class="relative group hover:text-orange-400 font-medium py-5">
+            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
                 Du học
             </div>
             
-            {{-- <div class="relative group py-2">
-                <button class="hover:text-orange-400">Luyện tập <i class="fa-solid fa-chevron-down"></i></button>
-                <div class="absolute left-0 hidden group-hover:block bg-white text-black mt-2 w-40 rounded shadow z-50">
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Trắc nghiệm</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Tự luận</a>
-                </div>
-            </div>
-            <a href="#" class="hover:text-orange-400">Cuộc thi</a>
-            <a href="#" class="hover:text-orange-400">Xếp hạng</a>
-            <div class="relative group py-2">
-                <button class="hover:text-orange-400">Thông tin <i class="fa-solid fa-chevron-down"></i></button>
-                <div class="absolute left-0 hidden group-hover:block bg-white text-black mt-2 w-40 rounded shadow z-50">
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Hướng dẫn</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Liên hệ</a>
-                </div>
-            </div>
-            <a href="#" class="hover:text-orange-400">Du học</a> --}}
         </div>
         <div class="flex items-center space-x-4">
             <a href="#" class="flex hover:text-orange-400 gap-2 font-medium items-center">

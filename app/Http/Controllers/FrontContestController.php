@@ -11,4 +11,11 @@ class FrontContestController extends Controller
         return view('student.contest.index');
 
     }
+
+    public function detail($slug){
+
+        return view('student.contest.detail', ['slug' => $slug]);
+
+    }
+
 }
