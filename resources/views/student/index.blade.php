@@ -138,23 +138,23 @@
         $benefits = [
             [
                 'name' => 'Lập kế hoạch học tập',
-                'img' => 'hh',
+                'img' => 'RANK BADGES',
                 'desc' =>
                     'Chủ động lập kế hoạch học tập hợp lý khi biết điểm mạnh yếu qua từng bài thi thử và bài luyện.',
             ],
             [
                 'name' => 'Mục tiêu rõ ràng',
-                'img' => 'rr',
+                'img' => 'RANK BADGES 1',
                 'desc' => 'Mục tiêu học tập rõ ràng với các chủ đề đã được tổng hợp sẵn từ chương trình học mới nhất.',
             ],
             [
                 'name' => 'Theo sát kết quả',
-                'img' => 'sl',
+                'img' => 'RANK BADGES 2',
                 'desc' => 'Học từ những sai lầm với những gợi ý thống kê quá trình học chi tiết.',
             ],
             [
                 'name' => 'Theo sát kết quả',
-                'img' => 'sl',
+                'img' => 'RANK BADGES 2',
                 'desc' => 'Học từ những sai lầm với những gợi ý thống kê quá trình học chi tiết.',
             ],
         ];
@@ -171,9 +171,11 @@
                 <div class="swiper-wrapper">
                     @foreach ($benefits as $benefit)
                         <div class="swiper-slide h-[350px]">
-                            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-                                <img src="{{ asset('/assets/img/home/' . $benefit['img'] . '.png') }}"
+                            <div class="group-shake hover:cursor-pointer bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                                <div class="hover-move-up-shake">
+                                    <img class="shimmer" src="{{ asset('/assets/img/home/' . $benefit['img'] . '.png') }}"
                                     alt="{{ $benefit['name'] }}" class="mx-auto">
+                                </div>
                                 <h3 class="font-bold mt-2 text-[26px] text-[#0F1726]">{{ $benefit['name'] }}</h3>
                                 <p class="pt-2 text-[#525266] text-[22px]">{{ $benefit['desc'] }}</p>
                             </div>

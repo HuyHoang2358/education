@@ -69,7 +69,7 @@
                         </a>
                     </div>
                     <div class="my-1">
-                        <a
+                        <a href="{{ route('contest.detail.rank', $slug) }}"
                             class="bg-transparent shadow-md border border-[#0B8493] w-fit px-6 py-2 rounded-full font-medium group/item relative inline-flex items-center justify-center overflow-hidden text-[#0B8493] hover:cursor-pointer"><span>Xem
                                 Bảng Xếp Hạng</span>
                             <div
