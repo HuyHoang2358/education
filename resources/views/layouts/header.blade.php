@@ -1,4 +1,4 @@
-<header class="bg-[#124D59] text-white">
+<header class="bg-[#124D59] text-white z-50 sticky top-0">
     <div class="container mx-auto flex items-center justify-between px-6">
         {{-- <div class="text-2xl font-bold"><a href="{{ route('home') }}" class="text-red-500">LOGO 1</a></div> --}}
         <img src="{{asset('/assets/img/home/LOGO.png')}}" alt="">

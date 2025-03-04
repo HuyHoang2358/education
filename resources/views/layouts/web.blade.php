@@ -72,6 +72,26 @@
             }
         }
 
+        @keyframes openup {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scaleX(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scaleX(1);
+            }
+        }
+
+        .animate-openup {
+            animation: openup 0.25s ease-out forwards;
+        }
+
+        .animate-closeup {
+            animation: openup 0.25s ease-out reverse;
+        }
+
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -82,12 +102,12 @@
 <body>
 
     <div class="wrapper">
-
+        @include('layouts.header')
         <div class="main-panel">
-            @include('layouts.header')
 
             <div class="page-inner bg-slate-100">
                 @yield('content')
+                @yield('contest')
             </div>
 
             @include('layouts.footer')
