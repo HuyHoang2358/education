@@ -96,12 +96,12 @@
     <!-- Thống kê -->
     <section class="bg-fixed bg-center bg-cover flex justify-center py-20"
         style="background-image: url('{{ asset('/assets/img/home/banner_blank.jpg') }}')">
-        <div class="container flex flex-col gap-10 px-12">
+        <div class="container flex flex-col gap-10 px-64">
             <div class="text-center text-[28px] font-medium text-[#124D59]">
                 Nền tảng luyện thi của chúng tôi có gì?
             </div>
             <div class="grid-cols-3	grid gap-10">
-                <div class="text-center flex flex-col gap-5 p-4 rounded-lg bg-opacity-60 bg-white">
+                <div class="text-center flex flex-col gap-5 p-4 rounded-lg bg-opacity-60 bg-white shadow-lg">
                     <div class="text-6xl font-bold text-[#124D59]">
                         100K+
                     </div>
