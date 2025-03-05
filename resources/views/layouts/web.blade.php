@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>@yield('title'){{--{{" | ".config('app.name', 'Learning') }}--}}</title>
+    <title>@yield('title'){{-- {{" | ".config('app.name', 'Learning') }} --}}</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     {{-- <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" /> --}}
@@ -146,11 +146,32 @@
             animation: moveUp 0.3s ease-in-out, shake 0.5s ease-in-out 0.3s;
         }
 
+        /* Scrollbar width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Scrollbar track (background) */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Scrollbar handle */
+        ::-webkit-scrollbar-thumb {
+            background: #0B8493;
+        }
+
+        /* Scrollbar handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            cursor: pointer;
+        }
+
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @livewireStyles
 </head>
 
 <body>
@@ -180,6 +201,7 @@
 
     <script src={{ asset('assets/js/main.js') }}></script>
     @yield('scripts')
+    @livewireScripts
 </body>
 
 </html>
