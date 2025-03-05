@@ -1,18 +1,14 @@
 @extends('layouts.web')
-
+@section('title', 'Đề thi')
 @section('content')
     <div class="max-w-7xl mx-auto p-4">
-        <nav class="text-sm mb-4" aria-label="breadcrumb">
-            <ol class="list-reset flex text-gray-600">
-                <li><a href="/" class="text-[#0B8493] font-bold">Trang chủ</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li><a href="" class="mx-2">Đề thi</a></li>
-            </ol>
-        </nav>
-        <h1 class="text-[28px] font-bold text-center">Đề thi thử tốt nghiệp THPT Quốc Gia</h1>
-        <p class="text-[24px] text-center text-gray-600">Tổng hợp các đề thi thử tốt nghiệp THPT qua các năm của các trường
-            THPT trên
-            toàn quốc.</p>
+        <!-- BreadCrumb -->
+        @include('component.breadcrumb', ['breadcrumbs' => [
+            ['name' => 'Đề thi', 'route' => route('exam.index')],
+        ]])
+
+        <!-- Title -->
+        @include('component.title_page', ['page_title' => 'Đề thi thử tốt nghiệp THPT Quốc Gia', 'page_description' => 'Tổng hợp các đề thi thử tốt nghiệp THPT qua các năm của các trường THPT trên toàn quốc.'])
 
         <!-- Danh sách môn học -->
         <div class=" bg-white rounded-2xl px-8 pb-6 mt-16">

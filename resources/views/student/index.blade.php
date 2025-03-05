@@ -1,5 +1,5 @@
 @extends('layouts.web')
-
+@section('title', 'Trang chủ')
 @section('content')
     <!-- Hero Section -->
     <section class="text-white text-center relative">

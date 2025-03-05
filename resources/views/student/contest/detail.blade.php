@@ -1,16 +1,12 @@
 @extends('layouts.web')
-
+@section('title') Tự tin vươn mình thế giới @endsection
 @section('contest-detail')
     <div class="max-w-7xl mx-auto p-4">
-        <nav class="text-sm mb-4" aria-label="breadcrumb">
-            <ol class="list-reset flex text-gray-600">
-                <li><a href="/" class="">Trang chủ</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li><a href="" class="">Cuộc thi</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li><a href="" class="mx-2 text-[#0B8493] font-bold">{{ $slug }}</a></li>
-            </ol>
-        </nav>
+        <!-- Breadcrumbs -->
+        @include('component.breadcrumb',["breadcrumbs" => [
+                 ["name" => "Cuộc thi", "route" => route('contest.index')],
+                 ['name' => 'Tự tin vươn mình thế giới', 'route' => route('contest.detail', 'test')]
+             ]])
 
         <div class="container bg-white p-10 rounded-2xl">
             <div class="flex flex-col gap-4 border-b-2">
@@ -25,33 +21,16 @@
                     iusto odio iste ullam nam accusamus voluptatibus, sit obcaecati aperiam dicta commodi doloribus nulla?
                     Voluptatibus, repudiandae esse!
                 </div>
+                <!-- Progress -->
                 <div class="flex gap-5 w-full justify-between mb-5">
-                    <div class="flex items-center justify-between gap-3 w-full">
-                        <div class="step-active bg-[#E6F4FF] text-[#1677FF] py-1 px-2 rounded-full">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        <span class="text-nowrap">
-                            Đăng ký
-                        </span>
-                        <div class="h-[1px] bg-[#1677FF] w-full"> </div>
-                    </div>
-                    <div class="flex items-center justify-between gap-3 w-full">
-                        <div class="step-active bg-[#1677FF] font-medium text-white py-1 px-3 rounded-full">
-                            2
-                        </div>
-                        <span class="text-nowrap">
-                            Diễn ra
-                        </span>
-                        <div class="h-[1px] bg-[#D9D9D9] w-full"> </div>
-                    </div>
-                    <div class="flex items-center justify-between gap-3">
-                        <div class="step-active bg-[#D9D9D9] font-medium text-gray-500 py-1 px-3 rounded-full">
-                            3
-                        </div>
-                        <span class="text-nowrap text-gray-500">
-                            Kết thúc
-                        </span>
-                    </div>
+                    @php
+                        $steps = [
+                            ["number" => 1, "name" => "Đăng ký", "status" => "Done"],
+                            ["number" => 2, "name" => "Diễn ra", "status" => "Active"],
+                            ["number" => 3, "name" => "Kết thúc", "status" => "Inactive"],
+                        ]
+                    @endphp
+                    @include('component.progress', ['steps' => $steps])
                 </div>
                 <div class="flex w-full justify-center gap-5 mb-5">
                     <div class="my-1">
@@ -129,7 +108,7 @@
             </div>
 
             <div class="flex flex-col gap-3 py-6">
-            
+
                 <h1 class="text-2xl font-bold uppercase mb-3">Hồ sơ đăng ký tham gia</h1>
 
                 <div class="bg-[#EDFAF9] p-8 rounded-2xl">

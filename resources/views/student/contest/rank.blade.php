@@ -1,18 +1,14 @@
 @extends('layouts.web')
-
+@section('title') Bảng xếp hạng @endsection
 @section('contest-rank')
     <div class="max-w-7xl mx-auto p-4">
-        <nav class="text-sm mb-4" aria-label="breadcrumb">
-            <ol class="list-reset flex text-gray-600">
-                <li><a href="/" class="">Trang chủ</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li><a href="" class="">Cuộc thi</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li><a href="" class="">{{ $slug }}</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li><a href="" class="mx-2 text-[#0B8493] font-bold"> Bảng xếp hạng </a></li>
-            </ol>
-        </nav>
+        <!-- Breadcrumbs -->
+        @include('component.breadcrumb',["breadcrumbs" => [
+                 ["name" => "Cuộc thi", "route" => route('contest.index')],
+                 ['name' => 'Tự tin vươn mình thế giới', 'route' => route('contest.detail', 'test')],
+                 ['name' => 'Bảng xếp hạng', 'route' => route('contest.detail.rank', 'test')],
+             ]])
+
 
         <div class="container bg-white p-10 rounded-2xl">
             <div class="flex flex-col gap-4">
@@ -27,34 +23,16 @@
                     iusto odio iste ullam nam accusamus voluptatibus, sit obcaecati aperiam dicta commodi doloribus nulla?
                     Voluptatibus, repudiandae esse!
                 </div>
+                <!-- Progress -->
                 <div class="flex gap-5 w-full justify-between mb-5">
-                    <div class="flex items-center justify-between gap-3 w-full">
-                        <div class="step-active bg-[#E6F4FF] text-[#1677FF] py-1 px-2 rounded-full">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        <span class="text-nowrap">
-                            Đăng ký
-                        </span>
-                        <div class="h-[1px] bg-[#1677FF] w-full"> </div>
-                    </div>
-                    <div class="flex items-center justify-between gap-3 w-full">
-                        <div class="step-active bg-[#1677FF] font-medium text-white py-1 px-3 rounded-full">
-                            2
-                        </div>
-                        <span class="text-nowrap">
-                            Diễn ra
-                        </span>
-                        <div class="h-[1px] bg-[#D9D9D9] w-full"> </div>
-                    </div>
-                    <div class="flex items-center justify-between gap-3">
-                        <div class="step-active bg-[#D9D9D9] font-medium text-gray-500 py-1 px-3 rounded-full">
-                            3
-                        </div>
-                        <span class="text-nowrap text-gray-500">
-                            Kết thúc
-                        </span>
-                    </div>
-                </div>
+                    @php
+                        $steps = [
+                            ["number" => 1, "name" => "Đăng ký", "status" => "Done"],
+                            ["number" => 2, "name" => "Diễn ra", "status" => "Active"],
+                            ["number" => 3, "name" => "Kết thúc", "status" => "Inactive"],
+                        ]
+                    @endphp
+                    @include('component.progress', ['steps' => $steps])
             </div>
         </div>
 
@@ -97,7 +75,7 @@
                             <td class="relative pb-5">
                                 <div class="hidden group-hover:block duration-300 absolute -top-2 left-36 rounded-t-full rounded-r-full rounded-bl-none bg-green-200 border-2 border-green-600 text-[#21A642] px-3 text-nowrap font-medium">
                                     Bạn cần <span>16</span> điểm để thăng hạng
-                                </div>  
+                                </div>
                                 <div
                                     class="shimmer relative bg-contain flex justify-center align-bottom pt-3">
                                     <img src="{{ asset('/assets/img/home/Frame1.png') }}" alt="">
@@ -120,7 +98,7 @@
                             <td class="relative group pb-5">
                                 <div class="hidden group-hover:block duration-300 absolute -top-2 left-36 rounded-t-full rounded-r-full rounded-bl-none bg-green-200 border-2 border-green-600 text-[#21A642] px-3 text-nowrap font-medium">
                                     Bạn cần <span>16</span> điểm để thăng hạng
-                                </div> 
+                                </div>
                                 <div
                                     class="shimmer relative bg-contain flex bg-no-repeat bg-center justify-center align-bottom pt-3">
                                     <img src="{{ asset('/assets/img/home/Frame2.png') }}" alt="">
@@ -143,7 +121,7 @@
                             <td class="relative group pb-4">
                                 <div class="hidden group-hover:block duration-300 absolute -top-2 left-36 rounded-t-full rounded-r-full rounded-bl-none bg-green-200 border-2 border-green-600 text-[#21A642] px-3 text-nowrap font-medium">
                                     Bạn cần <span>16</span> điểm để thăng hạng
-                                </div> 
+                                </div>
                                 <div
                                     class="shimmer bg-contain flex bg-no-repeat bg-center justify-center align-bottom pt-6">
                                     <div class="border-4 border-amber-900 rounded-full">

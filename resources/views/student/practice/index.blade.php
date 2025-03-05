@@ -1,14 +1,12 @@
 @extends('layouts.web')
-
+@section('title', 'Luyện tập')
 @section('content')
     <div class="max-w-7xl mx-auto p-4">
-        <nav class="text-sm mb-4" aria-label="breadcrumb">
-            <ol class="list-reset flex text-gray-600">
-                <li><a href="/" class="text-[#0B8493] font-bold">Trang chủ</a></li>
-                <li><span class="mx-2">/</span></li>
-                <li><a href="" class="mx-2">Luyện tập</a></li>
-            </ol>
-        </nav>
+        <!-- Breadcrumb -->
+        @include('component.breadcrumb', ['breadcrumbs' => [
+            ['name' => 'Trang chủ', 'route' => route('home')],
+            ['name' => 'Luyện tập', 'route' => route('practice.index')]
+        ]])
         <h1 class="text-[28px] font-bold text-center">Khu vực luyện tập lớp 12</h1>
         <p class="text-[24px] text-center text-gray-600">Phân tách và tổng hợp thành các chuyên đề có phân chia mức độ từ dễ
             đến khó, giúp bạn dễ dàng học tập.</p>
@@ -69,7 +67,7 @@
                             <li class="flex items-center justify-between border rounded-lg p-3 my-2">
                                 <span class="flex items-center">
                                     <span
-                                        class="w-8 h-8 flex items-center justify-center rounded-full 
+                                        class="w-8 h-8 flex items-center justify-center rounded-full
                                 {{ $index == 0 ? 'bg-[#0B8493] text-white' : 'bg-gray-200' }}">
                                         {{ $index + 1 }}
                                     </span>

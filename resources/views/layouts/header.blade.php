@@ -9,7 +9,7 @@
             </a>
 
             <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5 px-3">
-                Đề thi <i class="fa-solid fa-chevron-down text-md"></i>
+                <a href="{{route('exam.index')}}">Đề thi <i class="fa-solid fa-chevron-down text-md"></i></a>
                 <div class="absolute group-hover:flex left-0 mt-5 hidden bg-white text-black rounded shadow z-50 p-2">
                     <div>
                         <div class="group/item relative">
@@ -42,7 +42,7 @@
             </div>
 
             <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
-                Luyện tập <i class="fa-solid fa-chevron-down text-md"></i>
+                <a href="{{route('practice.index')}}">Luyện tập <i class="fa-solid fa-chevron-down text-md"></i></a>
                 <div class="p-2 absolute left-0 mt-5 hidden group-hover:grid grid-cols-3 w-[30rem] bg-white text-black rounded shadow z-50">
                     <div class="border-r border-gray-200 px-1">
                         <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Lớp 1</a>
@@ -86,12 +86,12 @@
             <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
                 Du học
             </div>
-            
+
         </div>
         <div class="flex items-center space-x-4">
             <a href="#" class="flex hover:text-orange-400 gap-2 font-medium items-center">
-                <span>Đăng nhập</span> 
-                <span class="mt-1"> 
+                <span>Đăng nhập</span>
+                <span class="mt-1">
                     <i class="text-lg fa-solid fa-circle-user">
                 </i></span>
             </a>
