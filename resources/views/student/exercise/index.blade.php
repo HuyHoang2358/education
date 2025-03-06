@@ -3,12 +3,12 @@
 @section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- BreadCrumb -->
-        @include('component.breadcrumb', ['breadcrumbs' => [
+        @include('components.breadcrumb', ['breadcrumbs' => [
             ['name' => 'Đề thi', 'route' => route('exam.index')],
         ]])
 
         <!-- Title -->
-        @include('component.title_page', ['page_title' => 'Đề thi thử tốt nghiệp THPT Quốc Gia', 'page_description' => 'Tổng hợp các đề thi thử tốt nghiệp THPT qua các năm của các trường THPT trên toàn quốc.'])
+        @include('components.title_page', ['page_title' => 'Đề thi thử tốt nghiệp THPT Quốc Gia', 'page_description' => 'Tổng hợp các đề thi thử tốt nghiệp THPT qua các năm của các trường THPT trên toàn quốc.'])
 
         <!-- Danh sách môn học -->
         <div class=" bg-white rounded-2xl px-8 pb-6 mt-16">

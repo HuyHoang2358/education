@@ -3,7 +3,7 @@
 @section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- Breadcrumb -->
-        @include('component.breadcrumb', ['breadcrumbs' => [
+        @include('components.breadcrumb', ['breadcrumbs' => [
             ['name' => 'Trang chủ', 'route' => route('home')],
             ['name' => 'Luyện tập', 'route' => route('practice.index')]
         ]])
