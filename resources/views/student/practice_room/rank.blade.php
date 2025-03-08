@@ -28,7 +28,7 @@
                     Voluptatibus, repudiandae esse!
                 </div>
                 <div class="flex justify-center">
-                    <a class="group/item bg-[#0B8493] w-fit px-10 py-2 rounded-full font-medium group/button-animated relative inline-flex items-center justify-center overflow-hidden text-white hover:cursor-pointer"
+                    <a href="{{ route('practice_room.detail', ['slug' => 'test']) }}" class="group/item bg-[#0B8493] w-fit px-10 py-2 rounded-full font-medium group/button-animated relative inline-flex items-center justify-center overflow-hidden text-white hover:cursor-pointer"
                         href="#">
                         <div
                             class="w-0 translate-x-[100%] pr-0 opacity-0 transition-all duration-200 group-hover/item:w-5 group-hover/item:translate-x-0 group-hover/item:pr-2 group-hover/item:opacity-100">

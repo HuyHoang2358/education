@@ -21,7 +21,7 @@
                                 </div>
                             </td>
                             <td class="pl-4 pt-3 text-[#525266] font-medium">Lương Gia Khánh</td>
-                            <td class="pl-4 pt-3 font-bold group-hover:text-cyan-600"> <div class="flex gap-2">800<img src="{{ asset('/assets/img/home/Flash lime.png') }}" alt=""></div></td>
+                            <td class="pl-4 pt-3 font-bold group-hover:text-cyan-600"> <div class="flex gap-2">800 exp</div></td>
                         </div>
                     </tr>
                 @elseif($rank == 2)
@@ -41,7 +41,7 @@
                                 </div>
                             </td>
                             <td class="pl-4 pt-3 text-[#525266] font-medium">Lương Gia Khánh</td>
-                            <td class="pl-4 pt-3 font-bold group-hover:text-cyan-600"> <div class="flex gap-2">800<img src="{{ asset('/assets/img/home/Flash lime.png') }}" alt=""></div></td>
+                            <td class="pl-4 pt-3 font-bold group-hover:text-cyan-600"> <div class="flex gap-2">800 exp</div></td>
                         </div>
                     </tr>
                 @elseif($rank == 3)
@@ -61,7 +61,7 @@
                                 </div>
                             </td>
                             <td class="pl-4 pt-3 text-[#525266] font-medium">Lương Gia Khánh</td>
-                            <td class="pl-4 pt-3 font-bold group-hover:text-cyan-600"> <div class="flex gap-2">800<img src="{{ asset('/assets/img/home/Flash lime.png') }}" alt=""></div></td>
+                            <td class="pl-4 pt-3 font-bold group-hover:text-cyan-600"> <div class="flex gap-2">800 exp</div></td>
                         </div>
                     </tr>
                 @else
