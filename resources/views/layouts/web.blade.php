@@ -25,8 +25,10 @@
             <div class="page-inner bg-slate-100">
                 @yield('content')
                 @yield('contest')
+                @yield('practice_room')
                 @yield('contest-detail')
                 @yield('contest-rank')
+                @yield('practice_room-rank')
             </div>
 
             @include('layouts.footer')
@@ -42,7 +44,7 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> --}}
 
     <script src={{ asset('assets/js/main.js') }}></script>
-    @yield('scripts')
+    {{-- @yield('scripts') --}}
 </body>
 
 </html>

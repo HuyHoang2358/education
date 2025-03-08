@@ -267,27 +267,9 @@
     <div class="h-10 w-10">
         <img src="/public/assets/img/cap.jpg" alt="">
     </div>
-@endsection
 
-@section('scripts')
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var swiper = new Swiper(".mySwiper", {
-                loop: true,
-                // autoplay: {
-                //     delay: 5000, // Tự động chuyển sau 3s
-                //     disableOnInteraction: false,
-                // },
-                // navigation: {
-                //     nextEl: ".swiper-button-next",
-                //     prevEl: ".swiper-button-prev",
-                // },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-
             var swiper = new Swiper(".mySwiper2", {
                 slidesPerView: 1,
                 spaceBetween: 10,
@@ -314,27 +296,6 @@
                     },
                 },
             });
-
-            var swiper = new Swiper(".mySwiper3", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: ".swiper-button-next-unique-2",
-                    prevEl: ".swiper-button-prev-unique-2",
-                },
-                pagination: {
-                    el: ".swiper-pagination-3",
-                    clickable: true,
-                },
-                breakpoints: {
-                    1049: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                    },
-                },
-            });
-
-
         });
     </script>
 @endsection

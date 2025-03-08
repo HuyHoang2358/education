@@ -85,4 +85,36 @@
             @endforeach
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var swiper = new Swiper(".mySwiper2", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next-unique",
+                    prevEl: ".swiper-button-prev-unique",
+                },
+                pagination: {
+                    el: ".swiper-pagination-2",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1049: {
+                        slidesPerView: 6,
+                        spaceBetween: 40,
+                    },
+                },
+            });
+        });
+    </script>
+
 @endsection
