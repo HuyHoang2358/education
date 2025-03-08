@@ -36,6 +36,9 @@ Route::get('/cuoc-thi/{slug}', [FrontContestController::class, 'detail'])->name(
 Route::get('/cuoc-thi/{slug}/bang-xep-hang', [FrontContestController::class, 'rank'])->name('contest.detail.rank'); // Trang cuộc thi chi tiết
 
 Route::get('/phong-luyen-tap', [PracticeRoomController::class, 'index'])->name('practice_room.index');
+Route::get('/phong-luyen-tap/{slug}/', [PracticeRoomController::class, 'detail'])->name('practice_room.detail');
 Route::get('/phong-luyen-tap/{slug}/bang-xep-hang', [PracticeRoomController::class, 'rank'])->name('practice_room.detail.rank');
+
+
 
 

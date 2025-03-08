@@ -56,7 +56,7 @@
                 Không tính phí
             </div>
             <div class="w-[2px] h-5 bg-[#CBD5E1]"> </div>
-            <div class="flex items-center">
+            <div class="flex items-center gap-2">
                 <i class="fa-solid fa-book-open"></i>
                 16 buổi
             </div>

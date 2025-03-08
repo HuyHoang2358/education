@@ -25,6 +25,12 @@ class PracticeRoomController extends Controller
 
     }
 
+    public function detail(){
+
+        return view('student.practice_room.detail');
+
+    }
+
     /**
      * Show the form for creating a new resource.
      */

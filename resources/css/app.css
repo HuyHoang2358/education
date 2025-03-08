@@ -16,5 +16,13 @@
         @apply bg-[#F1F5F9] text-[#64748B] px-3 py-2 rounded-md font-semibold transform duration-300 border border-[#F1F5F9]
     }
 
+    .class-section-active{
+        @apply bg-blue-secondary text-white
+    }
+
+    .class-section-not-active{
+        @apply bg-[#E2E8F0] text-[#525266]
+    }
+
 }
 

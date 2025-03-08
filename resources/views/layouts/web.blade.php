@@ -29,6 +29,7 @@
                 @yield('contest-detail')
                 @yield('contest-rank')
                 @yield('practice_room-rank')
+                @yield('practice_room-detail')
             </div>
 
             @include('layouts.footer')
