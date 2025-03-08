@@ -82,7 +82,7 @@
             <div class="flex gap-5 pt-5">
                 <div class="grid grid-cols-3 gap-5 basis-4/5">
                     <form class="w-full">
-                        <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2">
                             <option selected>Năm ra đề</option>
                             <option value="US">United States</option>
                             <option value="CA">Canada</option>
@@ -92,7 +92,7 @@
                     </form>
 
                     <form class="w-full">
-                        <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2">
                             <option selected>Loại đề thi</option>
                             <option value="US">United States</option>
                             <option value="CA">Canada</option>
@@ -102,7 +102,7 @@
                     </form>
 
                     <form class="w-full">
-                        <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2">
                             <option selected>Tỉnh/Thành phố</option>
                             <option value="US">United States</option>
                             <option value="CA">Canada</option>
@@ -132,11 +132,11 @@
             <div class="p-8 my-8 rounded-2xl border-gray-300 border-2">
                 <div class="flex justify-between">
                     <h2 class="text-2xl font-bold">Đề thi thử tốt nghiệp THPT Quốc Gia 2024 môn Tiếng Anh</h2>
-                    <span class="bg-[#E2E8F0] px-3 py-1 rounded-full font-semibold">20 đề</span>
+                    <span class="bg-[#E2E8F0] px-3 py-1 rounded-full font-semibold" id="countSum"></span>
                 </div>
 
-                <div class="grid grid-cols-3 gap-8 mt-4 p-5">
-                    <a href="#" class="group hover:scale-[1.05] duration-300 ease-in-out">
+                <div id="productContainer" class="grid grid-cols-3 gap-8 mt-4 p-5">
+                    <a href="#" class="product group hover:scale-[1.05] duration-300 ease-in-out">
                         <div class="p-6 border border-long-dashed rounded-xl bg-white relative">
                             <span class="text-sm text-[#0B8493] font-bold">Tiếng Anh</span>
                             <div>
@@ -154,7 +154,7 @@
                             <img class="h-[56px] w-[56px] absolute right-[-1px] top-[-1px] " src="/assets/img/cap.jpg" alt="">
                         </div>
                     </a>
-                    <a href="#" class="group hover:scale-[1.05] duration-300 ease-in-out">
+                    <a href="#" class="product group hover:scale-[1.05] duration-300 ease-in-out">
                         <div class="p-6 border border-long-dashed rounded-xl bg-white relative">
                             <span class="text-sm text-[#0B8493] font-bold">Tiếng Anh</span>
                             <div>
@@ -172,7 +172,7 @@
                             <img class="h-[56px] w-[56px] absolute right-[-1px] top-[-1px] " src="/assets/img/cap.jpg" alt="">
                         </div>
                     </a>
-                    <a href="#" class="group hover:scale-[1.05] duration-300 ease-in-out">
+                    <a href="#" class="product group hover:scale-[1.05] duration-300 ease-in-out">
                         <div class="p-6 border border-long-dashed rounded-xl bg-white relative">
                             <span class="text-sm text-[#0B8493] font-bold">Tiếng Anh</span>
                             <div>
@@ -190,19 +190,7 @@
                             <img class="h-[56px] w-[56px] absolute right-[-1px] top-[-1px] " src="/assets/img/cap.jpg" alt="">
                         </div>
                     </a>
-                </div>
-
-                <p class="mt-4 text-center text-[#0B8493] text-lg font-bold cursor-pointer">Xem thêm 17 đề ▼</p>
-            </div>
-
-            <div class="p-8 my-8 rounded-2xl border-gray-300 border-2">
-                <div class="flex justify-between">
-                    <h2 class="text-2xl font-bold">Đề thi thử tốt nghiệp THPT Quốc Gia 2024 môn Tiếng Anh</h2>
-                    <span class="bg-[#E2E8F0] px-3 py-1 rounded-full font-semibold">20 đề</span>
-                </div>
-
-                <div class="grid grid-cols-3 gap-8 mt-4 p-5">
-                    <a href="#" class="group hover:scale-[1.05] duration-300 ease-in-out">
+                    <a href="#" class="product group hover:scale-[1.05] duration-300 ease-in-out hidden">
                         <div class="p-6 border border-long-dashed rounded-xl bg-white relative">
                             <span class="text-sm text-[#0B8493] font-bold">Tiếng Anh</span>
                             <div>
@@ -220,7 +208,7 @@
                             <img class="h-[56px] w-[56px] absolute right-[-1px] top-[-1px] " src="/assets/img/cap.jpg" alt="">
                         </div>
                     </a>
-                    <a href="#" class="group hover:scale-[1.05] duration-300 ease-in-out">
+                    <a href="#" class="product group hover:scale-[1.05] duration-300 ease-in-out hidden">
                         <div class="p-6 border border-long-dashed rounded-xl bg-white relative">
                             <span class="text-sm text-[#0B8493] font-bold">Tiếng Anh</span>
                             <div>
@@ -238,7 +226,7 @@
                             <img class="h-[56px] w-[56px] absolute right-[-1px] top-[-1px] " src="/assets/img/cap.jpg" alt="">
                         </div>
                     </a>
-                    <a href="#" class="group hover:scale-[1.05] duration-300 ease-in-out">
+                    <a href="#" class="product group hover:scale-[1.05] duration-300 ease-in-out hidden">
                         <div class="p-6 border border-long-dashed rounded-xl bg-white relative">
                             <span class="text-sm text-[#0B8493] font-bold">Tiếng Anh</span>
                             <div>
@@ -258,7 +246,7 @@
                     </a>
                 </div>
 
-                <p class="mt-4 text-center text-[#0B8493] text-lg font-bold cursor-pointer">Xem thêm 17 đề ▼</p>
+                <p id="showMoreBtn" class="mt-4 text-center text-[#0B8493] text-lg font-bold cursor-pointer"></p>
             </div>
         </div>
     </div>
@@ -297,6 +285,58 @@
                 },
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const products = document.querySelectorAll(".product");
+            const showMoreBtn = document.getElementById("showMoreBtn");
+            const countSum = document.getElementById("countSum")
+
+            countSum.textContent = `${products.length} bài tập`;
+
+
+            let visibleCount = 3;
+
+            function updateView() {
+                let hiddenCount = 0;
+
+                products.forEach((product, index) => {
+                    if (index < visibleCount) {
+                        if (product.classList.contains("hidden")) {
+                            product.classList.remove("hidden");
+                            product.classList.add("animate-fade-in-scale")
+                        }
+                    } else {
+                        product.classList.add("hidden");
+                        hiddenCount++;
+                    }
+                });
+
+                // Cập nhật trạng thái nút Show More
+                if (hiddenCount > 0) {
+                    showMoreBtn.textContent = `Xem thêm (${hiddenCount}) đề ▼`;
+                    showMoreBtn.classList.remove("hidden");
+                } else {
+                    showMoreBtn.classList.add("hidden");
+                }
+            }
+
+            showMoreBtn.addEventListener("click", function () {
+                visibleCount += 3; // Mỗi lần bấm hiện thêm 3 sản phẩm
+                updateView();
+            });
+
+            updateView(); // Cập nhật giao diện ban đầu
+        });
     </script>
+    <style>
+        /* Animation */
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in-scale {
+            animation: fadeInScale 0.7s ease-out;
+        }
+    </style>
 @endsection
 
