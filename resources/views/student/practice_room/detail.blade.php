@@ -75,7 +75,7 @@
                         </button>
                         <i class="fa-solid fa-chevron-down absolute right-3 inset-y-2 pointer-events-none"></i>
                     </div>
-                    @include('components.pratice_room_modal_list')
+                    @include('components.pratice_room_list_modal')
                 </div>
                 @include('components.class_exercise')
             </div>

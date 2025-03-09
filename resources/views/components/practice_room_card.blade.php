@@ -61,7 +61,7 @@
                 16 buổi
             </div>
         </div>
-        <a class="group font-semibold rounded-full relative inline-flex items-center w-10 justify-center overflow-hidden bg-[#0B8493] basis-44 py-3">
+        <button onclick="toggleModal(true)" class="group font-semibold rounded-full relative inline-flex items-center w-10 justify-center overflow-hidden bg-[#0B8493] basis-44 py-3">
             <div
                 class="inline-flex text-nowrap translate-y-0 items-center justify-center px-6 text-neutral-50 transition duration-500 group-hover:-translate-y-[150%]">
                 Vào phòng</div>
@@ -70,6 +70,6 @@
                     <span
                         class="absolute h-full w-full translate-y-full skew-y-6 scale-y-0 bg-orange-400 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span><span
                     class="z-10">Vào phòng</span></div>
-        </a>
+        </button>
     </div>
 </div>

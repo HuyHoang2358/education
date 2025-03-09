@@ -88,6 +88,6 @@ function toggleModal(show) {
 
 function closeModal(event) {
     if (event.target.id === "modal") {
-        toggleModal(flase);
+        toggleModal(false);
     }
 }

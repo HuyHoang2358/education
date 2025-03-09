@@ -173,7 +173,7 @@
                     @include('components.practice_room_card')
                 </div> --}}
                 @livewire('practice-room-pagination')
-
+                @include('components.join_room_confirmation')
             </div>
 
         </div>
