@@ -3,12 +3,12 @@
 @section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- BreadCrumb -->
-        @include('component.breadcrumb', ['breadcrumbs' => [
+        @include('components.breadcrumb', ['breadcrumbs' => [
             ['name' => 'Đề thi', 'route' => route('exam.index')],
         ]])
 
         <!-- Title -->
-        @include('component.title_page', ['page_title' => 'Đề thi thử tốt nghiệp THPT Quốc Gia', 'page_description' => 'Tổng hợp các đề thi thử tốt nghiệp THPT qua các năm của các trường THPT trên toàn quốc.'])
+        @include('components.title_page', ['page_title' => 'Đề thi thử tốt nghiệp THPT Quốc Gia', 'page_description' => 'Tổng hợp các đề thi thử tốt nghiệp THPT qua các năm của các trường THPT trên toàn quốc.'])
 
         <!-- Danh sách môn học -->
         <div class=" bg-white rounded-2xl px-8 pb-6 mt-16">
@@ -255,27 +255,9 @@
     <div class="h-10 w-10">
         <img src="/public/assets/img/cap.jpg" alt="">
     </div>
-@endsection
 
-@section('scripts')
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var swiper = new Swiper(".mySwiper", {
-                loop: true,
-                // autoplay: {
-                //     delay: 5000, // Tự động chuyển sau 3s
-                //     disableOnInteraction: false,
-                // },
-                // navigation: {
-                //     nextEl: ".swiper-button-next",
-                //     prevEl: ".swiper-button-prev",
-                // },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-
             var swiper = new Swiper(".mySwiper2", {
                 slidesPerView: 1,
                 spaceBetween: 10,
@@ -302,27 +284,6 @@
                     },
                 },
             });
-
-            var swiper = new Swiper(".mySwiper3", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: ".swiper-button-next-unique-2",
-                    prevEl: ".swiper-button-prev-unique-2",
-                },
-                pagination: {
-                    el: ".swiper-pagination-3",
-                    clickable: true,
-                },
-                breakpoints: {
-                    1049: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                    },
-                },
-            });
-
-
         });
 
         document.addEventListener("DOMContentLoaded", function () {

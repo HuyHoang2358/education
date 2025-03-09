@@ -3,7 +3,7 @@
 @section('contest-rank')
     <div class="max-w-7xl mx-auto p-4">
         <!-- Breadcrumbs -->
-        @include('component.breadcrumb',["breadcrumbs" => [
+        @include('components.breadcrumb',["breadcrumbs" => [
                  ["name" => "Cuộc thi", "route" => route('contest.index')],
                  ['name' => 'Tự tin vươn mình thế giới', 'route' => route('contest.detail', 'test')],
                  ['name' => 'Bảng xếp hạng', 'route' => route('contest.detail.rank', 'test')],
@@ -32,12 +32,12 @@
                             ["number" => 3, "name" => "Kết thúc", "status" => "Inactive"],
                         ]
                     @endphp
-                    @include('component.progress', ['steps' => $steps])
+                    @include('components.progress', ['steps' => $steps])
                 </div>
             </div>
         </div>
 
-        <div class="container bg-white py-10 rounded-2xl mt-6">
+        <div class="container bg-white py-10 rounded-2xl my-6">
 
             <div class="text-center text-[#FFAA00] text-2xl uppercase font-bold">
                 Vinh danh bảng vàng

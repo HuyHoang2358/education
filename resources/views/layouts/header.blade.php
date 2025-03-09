@@ -69,9 +69,9 @@
                 Cuộc thi
             </a>
 
-            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
+            <a href="{{ route('practice_room.index') }}" class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
                 Phòng luyện tập
-            </div>
+            </a>
 
             <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
                 Thông tin <i class="fa-solid fa-chevron-down text-md"></i>

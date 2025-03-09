@@ -11,7 +11,16 @@ export default {
     ],
     theme: {
         extend: {
-            
+            screens: {
+                'small-desktop': '1050px'
+            },
+            colors: {
+                'blue-primary': '#124D59',
+                'blue-secondary': '#0B8493',
+                'orange-primary': '#FF8040',
+                'light-gray': '#525266',
+                'full-black': '#0F1726'
+            }
         },
     },
     plugins: [
