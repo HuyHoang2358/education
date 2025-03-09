@@ -24,5 +24,13 @@
         @apply bg-[#E2E8F0] text-[#525266]
     }
 
+    .class-selection-active{
+        @apply border border-blue-secondary
+    }
+
+    .class-selection-active .class-name{
+        @apply text-blue-secondary 
+    }
+
 }
 
