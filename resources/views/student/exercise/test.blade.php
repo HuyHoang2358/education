@@ -79,4 +79,15 @@
 
     <script id="pdf_script" data-pdf-url="{{ asset('/assets/img/exercise/tailieu.pdf') }}" src="{{ asset('assets/js/components/interactive_pdf.js') }}"></script>
 
+    <style>
+        .pdf-canvas-size {
+            width: 85% !important;
+            /* Adjust this percentage to your preferred size */
+            height: auto !important;
+            /* Maintain aspect ratio */
+            display: block;
+            /* margin: auto; */
+        }
+    </style>
+
 @endsection
