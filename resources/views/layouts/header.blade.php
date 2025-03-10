@@ -83,10 +83,9 @@
                 </div>
             </div>
 
-            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
+            <a href="{{ route('abroad.index') }}" class="{{ Str::startsWith(Route::currentRouteName(), 'abroad') ? 'bg-orange-500 text-white font-medium rounded-full py-2 px-3 hover:text-white' : 'relative hover:cursor-pointer group font-medium py-5 hover:text-orange-400' }}">
                 Du học
-            </div>
-
+            </a>
         </div>
         <div class="flex items-center space-x-4">
             <a href="#" class="flex hover:text-orange-400 gap-2 font-medium items-center">

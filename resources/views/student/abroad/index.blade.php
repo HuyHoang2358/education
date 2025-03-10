@@ -3,7 +3,7 @@
 @section('content')
     <div class="max-w-7xl mx-auto pt-4">
         <!-- Breadcrumb -->
-        @include('component.breadcrumb', ['breadcrumbs' => [
+        @include('components.breadcrumb', ['breadcrumbs' => [
             ['name' => 'Du học', 'route' => route('practice.index')]
         ]])
         <h1 class="text-4xl font-semibold text-center pb-5 pt-10">Tư vấn du học</h1>
@@ -223,5 +223,4 @@
         });
     </script>
 @endsection
-
 
