@@ -1,6 +1,6 @@
 @extends('layouts.web')
 @section('title') Chưa đăng nhập @endsection
-@section('contest')
+@section('content')
     <div style="background-image: url('{{ asset('/assets/img/home/Decor.png') }}')" class="bg-cover bg-no-repeat w-full pb-24">
         <div class="max-w-7xl mx-auto p-4">
             @include('components.breadcrumb',["breadcrumbs" => [
