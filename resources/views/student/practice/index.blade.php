@@ -3,7 +3,7 @@
 @section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- Breadcrumb -->
-        @include('component.breadcrumb', ['breadcrumbs' => [
+        @include('components.breadcrumb', ['breadcrumbs' => [
             ['name' => 'Trang chủ', 'route' => route('home')],
             ['name' => 'Luyện tập', 'route' => route('practice.index')]
         ]])
@@ -199,6 +199,38 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var swiper = new Swiper(".mySwiper2", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next-unique",
+                    prevEl: ".swiper-button-prev-unique",
+                },
+                pagination: {
+                    el: ".swiper-pagination-2",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1049: {
+                        slidesPerView: 6,
+                        spaceBetween: 40,
+                    },
+                },
+            });
+        });
+    </script>
+
 @endsection
 
 @section('scripts')
