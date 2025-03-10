@@ -2,7 +2,7 @@
 @section('title')
     Bảng xếp hạng
 @endsection
-@section('practice_room-rank')
+@section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- Breadcrumbs -->
         @include('components.breadcrumb', [

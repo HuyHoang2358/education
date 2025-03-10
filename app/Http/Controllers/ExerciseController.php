@@ -10,4 +10,18 @@ class ExerciseController extends Controller
     {
         return view('student.exercise.index');
     }
+
+    public function startTest(){
+
+        return view('student.exercise.test');
+
+    }
+
+
+    public function checkAnswer(Request $request){
+        
+        dd($request->all());
+
+    }
+
 }

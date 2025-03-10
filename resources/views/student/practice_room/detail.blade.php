@@ -2,7 +2,7 @@
 @section('title')
     Thông tin lớp học
 @endsection
-@section('practice_room-detail')
+@section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- Breadcrumbs -->
         @include('components.breadcrumb', [

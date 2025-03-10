@@ -1,6 +1,6 @@
 @extends('layouts.web')
 @section('title') Tự tin vươn mình thế giới @endsection
-@section('contest-detail')
+@section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- Breadcrumbs -->
         @include('components.breadcrumb',["breadcrumbs" => [

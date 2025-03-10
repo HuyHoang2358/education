@@ -2,7 +2,7 @@
 @section('title')
     Phòng luyện tập
 @endsection
-@section('practice_room')
+@section('content')
     <div style="background-image: url('{{ asset('/assets/img/home/bg-contest.png') }}')"
         class="bg-contain bg-no-repeat w-full">
         <div class="max-w-7xl mx-auto p-4">

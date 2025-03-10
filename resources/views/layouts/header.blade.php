@@ -1,4 +1,4 @@
-<header class="bg-[#124D59] text-white z-50 sticky top-0">
+<header id="sticky-header" class="bg-[#124D59] text-white z-50 sticky top-0 transition-transform">
     <div class="container mx-auto flex items-center justify-between px-6">
         {{-- <div class="text-2xl font-bold"><a href="{{ route('home') }}" class="text-red-500">LOGO 1</a></div> --}}
         <img src="{{asset('/assets/img/home/LOGO.png')}}" alt="">
@@ -69,7 +69,7 @@
                 Cuộc thi
             </a>
 
-            <a href="{{ route('practice_room.index') }}" class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
+            <a href="{{ route('practice_room.index') }}" class="{{ Str::startsWith(Route::currentRouteName(), 'practice_room') ? 'bg-orange-500 text-white font-medium rounded-full py-2 px-3 hover:text-white' : 'relative hover:cursor-pointer group font-medium py-5 hover:text-orange-400' }}">
                 Phòng luyện tập
             </a>
 
