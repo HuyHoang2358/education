@@ -78,15 +78,14 @@
                 <div class="absolute left-0 mt-5 w-60 hidden group-hover:block bg-white text-black p-2 rounded shadow z-50">
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Về chúng tôi</a>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Trình chấm</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Đối tác của chúng tôi</a>
+                    <a href="{{ route('partner.index')}}" class="block px-4 py-2 hover:bg-gray-200 rounded">Đối tác của chúng tôi</a>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">FAQ</a>
                 </div>
             </div>
 
-            <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5">
+            <a href="{{ route('abroad.index') }}" class="{{ Str::startsWith(Route::currentRouteName(), 'abroad') ? 'bg-orange-500 text-white font-medium rounded-full py-2 px-3 hover:text-white' : 'relative hover:cursor-pointer group font-medium py-5 hover:text-orange-400' }}">
                 Du học
-            </div>
-
+            </a>
         </div>
         <div class="flex items-center space-x-4">
             <a href="#" class="flex hover:text-orange-400 gap-2 font-medium items-center">
