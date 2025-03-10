@@ -78,7 +78,7 @@
                 <div class="absolute left-0 mt-5 w-60 hidden group-hover:block bg-white text-black p-2 rounded shadow z-50">
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Về chúng tôi</a>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Trình chấm</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Đối tác của chúng tôi</a>
+                    <a href="{{ route('partner.index')}}" class="block px-4 py-2 hover:bg-gray-200 rounded">Đối tác của chúng tôi</a>
                     <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">FAQ</a>
                 </div>
             </div>
