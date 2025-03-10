@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/admin/login', [AuthController::class, 'login']);
 Route::post('/admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
-Route::get('/chua-dang-nhap', [AuthController::class, function () {
+Route::get('/chua-dang-nhap',  function () {
     return view('student.not_log_in'); 
-}])->name('not.login');
+})->name('not.login');
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
