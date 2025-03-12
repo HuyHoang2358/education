@@ -128,8 +128,6 @@ function scrollToQuestion(questionNumber) {
                     for (let i = 0; i < positions.length; i++) {
                         accumulatedLength += positions[i].str.length;
 
-                        //console.log(positions[i]);
-
                         if (accumulatedLength > foundIndex) {
                             let {
                                 x,

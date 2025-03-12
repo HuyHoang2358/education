@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     initScrollHandler();
     initBackButton();
-    startTimer();
+    //startTimer();
 });
 
 /** Handles header visibility on scroll */
@@ -57,7 +57,7 @@ function submitForm(img) {
         customClass: {
             popup: "rounded-xl shadow-lg",
             title: "text-xl text-full-black font-bold",
-            confirmButton: "px-1 py-2 w-52 text-md rounded-full",
+            confirmButton: "px-3 py-2 w-52 text-md rounded-full",
             cancelButton: "px-5 py-2 text-full-black w-52 border-2 text-md rounded-full"
         },
     }).then(result => {
@@ -104,4 +104,33 @@ function initBackButton() {
         event.preventDefault();
         window.history.back();
     });
+}
+
+function updateFileLabel($number) {
+    const fileInput = document.getElementById('fileUpload-' + $number);
+    const fileLabel = document.getElementById('fileLabel-' + $number);
+    const numbering = document.getElementById('answer-number-' + $number)
+    const deleteButton = document.getElementById('delete-button-'+ $number);
+    let file = fileInput.files[0];
+
+    if(file) {
+        fileLabel.className = "cursor-pointer flex items-center text-blue-900 gap-3 truncate max-w-36";
+        fileLabel.innerHTML = `<i class="fa-solid fa-paperclip text-light-gray"></i> ${file.name}`;
+        numbering.className = "rounded-full bg-transparent py-2 px-[0.85rem] border hover:cursor-pointer border-[#0B8493] duration-200 ease-out w-fit";
+        deleteButton.classList.toggle("hidden");
+    }
+
+}
+
+function removeFileUpload($number, $current_button){
+
+    const fileInput = document.getElementById('fileUpload-' + $number);
+    const fileLabel = document.getElementById('fileLabel-' + $number);
+    const numbering = document.getElementById('answer-number-' + $number)
+
+    fileInput.value = "";
+    fileLabel.className = "cursor-pointer flex items-center gap-3 py-3 px-10 bg-[#EDFAF9] border-2 border-[#0B8493] rounded-lg text-[#0B8493] hover:bg-gray-200 transition text-nowrap";
+    fileLabel.innerHTML = `<i class="fa-solid fa-arrow-up-from-bracket"></i> Tải tệp lên`;
+    numbering.className = "rounded-full bg-[#E2E8F0] py-2 px-[0.85rem] hover:cursor-pointer border border-[#E2E8F0] duration-200 ease-out w-fit";
+    $current_button.classList.toggle('hidden');
 }

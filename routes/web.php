@@ -43,7 +43,7 @@ Route::get('/phong-luyen-tap', [PracticeRoomController::class, 'index'])->name('
 Route::get('/phong-luyen-tap/{slug}/', [PracticeRoomController::class, 'detail'])->name('practice_room.detail');
 Route::get('/phong-luyen-tap/{slug}/bang-xep-hang', [PracticeRoomController::class, 'rank'])->name('practice_room.detail.rank');
 
-Route::get('/lam-bai', [ExerciseController::class, 'startTest'])->name('test');
+Route::get('/lam-bai/{type}', [ExerciseController::class, 'startTest'])->name('test');
 Route::post('/lam-bai/tinh-diem', [ExerciseController::class, 'checkAnswer'])->name('test.score');
 
 
