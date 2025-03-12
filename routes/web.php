@@ -12,6 +12,7 @@ use App\Http\Controllers\FrontContestController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PracticeRoomController;
+use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
 
 // Admin
@@ -45,5 +46,10 @@ Route::get('/phong-luyen-tap/{slug}/bang-xep-hang', [PracticeRoomController::cla
 
 Route::get('/lam-bai', [ExerciseController::class, 'startTest'])->name('test');
 Route::post('/lam-bai/tinh-diem', [ExerciseController::class, 'checkAnswer'])->name('test.score');
+
+Route::get('/khao-sat-first', [SurveyController::class, 'first'])->name('survey.first');
+Route::get('/khao-sat-second', [SurveyController::class, 'second'])->name('survey.second');
+Route::get('/khao-sat-third', [SurveyController::class, 'third'])->name('survey.third');
+Route::get('/khao-sat-fourth', [SurveyController::class, 'fourth'])->name('survey.fourth');
 
 
