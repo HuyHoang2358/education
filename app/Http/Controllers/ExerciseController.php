@@ -8,18 +8,18 @@ class ExerciseController extends Controller
 {
     public function index()
     {
-        return view('student.exercise.index');
+        return view('student.exam.index');
     }
 
     public function startTest(){
 
-        return view('student.exercise.test');
+        return view('student.exam.test');
 
     }
 
 
     public function checkAnswer(Request $request){
-        
+
         dd($request->all());
 
     }

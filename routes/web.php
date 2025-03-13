@@ -22,7 +22,7 @@ Route::post('/admin/logout', [AuthController::class, 'logout'])->name('admin.log
     return view('student.not_log_in');
 }])->name('not.login');*/
 
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::resource('categories', CategoryController::class);
     Route::resource('exams', ExamController::class);
