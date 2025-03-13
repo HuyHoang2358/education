@@ -8,12 +8,12 @@ class ExerciseController extends Controller
 {
     public function index()
     {
-        return view('student.exercise.index');
+        return view('student.exam.index');
     }
 
-    public function startTest(){
+    public function startTest($type = null){
 
-        return view('student.exercise.test');
+        return view('student.exam.test', ['type' => $type]);
 
     }
 
