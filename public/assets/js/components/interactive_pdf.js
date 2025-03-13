@@ -86,7 +86,7 @@ function highlightText(x, y, pageNum, questionNumber) {
     setTimeout(() => {
         ctx.putImageData(originalCanvasData[pageNum], 0, 0); // Restore original canvas
         currentlyHighlighted.delete(questionNumber); // Allow re-highlighting after it disappears
-    }, 2000);
+    }, 1500);
 }
 
 function scrollToQuestion(questionNumber) {
@@ -127,8 +127,6 @@ function scrollToQuestion(questionNumber) {
 
                     for (let i = 0; i < positions.length; i++) {
                         accumulatedLength += positions[i].str.length;
-
-                        //console.log(positions[i]);
 
                         if (accumulatedLength > foundIndex) {
                             let {
