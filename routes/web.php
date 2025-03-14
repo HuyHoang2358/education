@@ -28,6 +28,13 @@ Route::prefix('admin')->group(function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('exams', ExamController::class);
     Route::resource('contests', ContestController::class);
+    Route::get('fileConfig', function () {
+        return view('admin.media.index');
+    })->name('admin.media.image');
+});
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
 // Student

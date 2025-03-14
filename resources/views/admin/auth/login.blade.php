@@ -238,8 +238,6 @@
             signOnForm.classList.toggle("hidden");
         }
 
-        function 
-
     </script>
 
     <script>
