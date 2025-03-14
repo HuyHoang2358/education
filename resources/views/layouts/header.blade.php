@@ -8,7 +8,7 @@
             </a>
 
             <div class="relative hover:cursor-pointer group hover:text-orange-400 font-medium py-5 px-3">
-                <a href="{{route('exam.index')}}">Đề thi <i class="fa-solid fa-chevron-down text-md"></i></a>
+                <a href="{{route('exam.index')}}">Đề thi<i class="fa-solid fa-chevron-down text-md"></i></a>
                 <div class="absolute group-hover:flex left-0 mt-5 hidden bg-white text-black rounded shadow z-50 p-2">
                     <div>
                         <div class="group/item relative">
@@ -86,13 +86,27 @@
                 Du học
             </a>
         </div>
-        <div class="flex items-center space-x-4">
-            <a href="#" class="flex hover:text-orange-400 gap-2 font-medium items-center">
-                <span>Đăng nhập</span>
-                <span class="mt-1">
-                    <i class="text-lg fa-solid fa-circle-user">
-                </i></span>
-            </a>
+        <div class="">
+            @if(Auth::check())
+            <div class="relative group hover:cursor-pointer transition-colors h-full py-5">
+                <a id="account-button" href="#" class="flex group-hover:text-orange-400 gap-2 font-medium items-center">
+                    <span>{{ Auth::user()->name }}</span>
+                    <span class="mt-1">
+                        <i class="text-lg fa-solid fa-circle-user"></i>
+                    </span>
+                    <div class="absolute right-0 mt-5 w-36 hidden group-hover:block bg-white text-black p-2 rounded shadow z-50">
+                        <a href="{{ route('logout') }}" class="block px-4 py-2 hover:bg-gray-200 rounded"><i class="fa-solid fa-arrow-right-from-bracket pr-1"></i>Đăng xuất</a>
+                    </div>
+                </a>
+            </div>
+            @else
+                <a href="{{ route('login') }}" class="flex hover:text-orange-400 gap-2 font-medium items-center">
+                    <span>Đăng nhập</span>
+                    <span class="mt-1">
+                        <i class="text-lg fa-solid fa-circle-user"></i>
+                    </span>
+                </a>
+            @endif
         </div>
     </div>
 </header>

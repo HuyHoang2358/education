@@ -14,11 +14,14 @@ use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PracticeRoomController;
 use App\Http\Controllers\SurveyController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SocialAuthController;
 
 // Admin
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->name('admin.logout');
+Route::get('/dang-nhap', [AuthController::class, 'showLoginForm'])->name('login');
+Route::get('/dang-ky', [AuthController::class, 'showSignOnForm'])->name('signon');
+Route::post('/dang-ky', [AuthController::class, 'signon']);
+Route::post('/dang-nhap', [AuthController::class, 'login']);
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 /*Route::get('/chua-dang-nhap', [AuthController::class, function () {
     return view('student.not_log_in');
 }])->name('not.login');*/
@@ -33,7 +36,10 @@ Route::prefix('admin')->group(function () {
     })->name('admin.media.image');
 });
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web']], function () {
+Route::get('auth/{provider}', [SocialAuthController::class, 'redirect'])->name('social.redirect');
+Route::get('auth/{provider}/callback', [SocialAuthController::class, 'callback'])->name('social.callback');
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web'], 'as' => 'admin.'], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
