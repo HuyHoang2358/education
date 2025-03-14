@@ -61,12 +61,12 @@
                 <div class="swiper-wrapper">
                     @foreach ($subjects as $subject)
                         <div class="swiper-slide">
-                            <div class="bg-white rounded-lg shadow-md hover:shadow-orange-300 transform duration-300">
+                            <div class="rounded-lg shadow-md hover:shadow-orange-300 transform duration-300">
                                 <a class="group" href="">
-                                    <div class="overflow-hidden relative ">
+                                    <div class="overflow-hidden relative">
                                         <img src="{{ asset('/assets/img/abroad/' . $subject['img'] . '.png') }}"
                                              alt="{{ $subject['name'] }}"
-                                             class="w-[100%] transform transition-transform duration-300 group-hover:scale-110">
+                                             class="w-[100%] rounded-tr-xl rounded-bl-xl rounded-tl-[72px] rounded-br-[72px] transform transition-transform duration-300 group-hover:scale-110">
                                         <div class="absolute bottom-0 bg-white m-3 px-3 rounded-br-[3vw] rounded-lg h-[168px] text-center">
                                             <h3 class="font-semibold text-[20px] pt-2">{{ $subject['name'] }}</h3>
                                             <p class="text-gray-500 text-sm pt-2">{{ $subject['desc'] }}</p>
@@ -151,6 +151,108 @@
                             class="absolute h-full w-full translate-y-full skew-y-6 scale-y-0 bg-orange-400 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span><span
                             class="z-10">ĐĂNG KÝ NGAY</span></div>
                 </button>
+            </div>
+        </div>
+
+        <div style="background-image: url('{{ asset('assets/img/abroad/cam-7.png') }}');" class="bg-cover bg-center h-[528px]">
+            <div class="text-white flex flex-col justify-center items-center pt-32">
+                <h4 class="text-4xl font-semibold">Các bước để chúng tôi hỗ trợ bạn</h4>
+                <p class="text-lg py-10">Hãy thực hiện theo các bước sau đây để chúng tôi có thể hỗ trợ bạn một cách tốt nhất.</p>
+                <div class="grid grid-cols-4 gap-20 px-32">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative w-16 h-16">
+                            <img class="relative w-16 h-16" src="{{asset('assets/img/abroad/cam-12.png')}}" alt="">
+                            <p class="absolute top-[17px] right-[-18px] w-fit px-[11px] py-1 text-sm font-semibold bg-orange-500 border-2 border-white rounded-full">1</p>
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-semibold pt-6">Đọc kỹ thông tin</h5>
+                            <p class="text-sm pt-2">Đọc kỹ các thông tin và dịch vụ mà chúng tôi cung cấp.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative w-16 h-16">
+                            <img class="relative w-16 h-16" src="{{asset('assets/img/abroad/cam-9.png')}}" alt="">
+                            <p class="absolute top-[17px] right-[-18px] w-fit px-[11px] py-1 text-sm font-semibold bg-orange-500 border-2 border-white rounded-full">1</p>
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-semibold pt-6">Điền thông tin</h5>
+                            <p class="text-sm pt-2">Để lại thông tin liên lạc của bạn để chúng tôi có thể kết nối.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative w-16 h-16">
+                            <img class="relative w-16 h-16" src="{{asset('assets/img/abroad/cam-10.png')}}" alt="">
+                            <p class="absolute top-[17px] right-[-18px] w-fit px-[11px] py-1 text-sm font-semibold bg-orange-500 border-2 border-white rounded-full">1</p>
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-semibold pt-6">Nhận cuộc gọi</h5>
+                            <p class="text-sm pt-2">Tư vấn viên sẽ gọi đến và sắp xếp lịch hẹn.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="relative w-16 h-16">
+                            <img class="relative w-16 h-16" src="{{asset('assets/img/abroad/cam-11.png')}}" alt="">
+                            <p class="absolute top-[17px] right-[-18px] w-fit px-[11px] py-1 text-sm font-semibold bg-orange-500 border-2 border-white rounded-full">1</p>
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-semibold pt-6">Chuẩn bị hồ sơ</h5>
+                            <p class="text-sm pt-2">Chuẩn bị các giấy tờ theo hướng dẫn của tư vấn viên.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pb-20">
+            <div>
+                <p class="text-center text-4xl font-semibold py-10"><span class="text-[#0B8493]">Khởi đầu hành trình du học</span> của bạn<br> cùng chúng tôi <span class="text-orange-400">ngay hôm nay</span></p>
+            </div>
+            <div class="grid grid-cols-2 gap-10">
+                <div>
+                    <img class="border-2 border-[#0B8493] rounded-2xl w-[600px] h-[578px]" src="{{asset('assets/img/abroad/cam-13.png')}}" alt="">
+                </div>
+                <div class="p-10 h-fit border-2 border-[#0B8493] rounded-2xl">
+                    <p class="text-center text-2xl font-semibold"><span class="text-[#0B8493]">Điền thông tin</span> vào form đăng ký<br> <span class="text-orange-400">và gửi </span>cho chúng tôi</p>
+                    <div>
+                        <p class="font-semibold pt-4">Họ và tên</p>
+                        <div class=" border-b-2 border-black flex items-center relative">
+                            <input type="text" placeholder="Nhập họ và tên" class="w-full pt-2 text-[#0B8493] bg-transparent placeholder-gray-500 px-4 py-2 focus:outline-none">
+                            <i class="fa-solid fa-user-pen absolute right-3 top-3 text-[#0B8493]"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-semibold pt-4">Số điện thoại</p>
+                        <div class=" border-b-2 border-black flex items-center relative">
+                            <input type="text" placeholder="0987654321" class="w-full pt-2 text-[#0B8493] bg-transparent placeholder-gray-500 px-4 py-2 focus:outline-none">
+                            <i class="fa-solid fa-phone-volume absolute right-3 top-3 text-[#0B8493]"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-semibold pt-4">Địa chỉ Email</p>
+                        <div class=" border-b-2 border-black flex items-center relative">
+                            <input type="text" placeholder="nguyenvan@gmail.com" class="w-full pt-2 text-[#0B8493] bg-transparent placeholder-gray-500 px-4 py-2 focus:outline-none">
+                            <i class="fa-solid fa-envelope-open-text absolute right-3 top-3 text-[#0B8493]"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-semibold pt-4">Lời nhắn gửi</p>
+                        <div class="border-b-2 border-black flex items-center relative">
+                            <textarea placeholder="Hãy để lại lời nhắn của bạn (Nếu có)." class="w-full pt-2 text-[#0B8493] bg-transparent placeholder-gray-500 px-4 py-2 focus:outline-none"></textarea>
+                            <i class="fa-solid fa-paper-plane absolute right-3 top-3 text-[#0B8493]"></i>
+                        </div>
+                    </div>
+                    <button
+                        class="group font-semibold rounded-full w-full mt-10 relative inline-flex h-10 items-center justify-center overflow-hidden bg-[#0B8493]">
+                        <div
+                            class="inline-flex translate-y-0 items-center justify-center px-6 text-neutral-50 transition duration-500 group-hover:-translate-y-[150%]">
+                            GỬI THÔNG TIN</div>
+                        <div
+                            class="absolute inline-flex h-16 w-full translate-y-[100%] items-center justify-center text-neutral-50 transition duration-500 group-hover:translate-y-0">
+                        <span
+                            class="absolute h-full w-full translate-y-full skew-y-6 scale-y-0 bg-orange-400 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span><span
+                                class="z-10">GỬI THÔNG TIN</span></div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

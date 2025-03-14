@@ -19,7 +19,7 @@ class ExerciseController extends Controller
 
 
     public function checkAnswer(Request $request){
-        
+
         dd($request->all());
 
     }
