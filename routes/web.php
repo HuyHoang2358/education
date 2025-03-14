@@ -15,9 +15,9 @@ use App\Http\Controllers\PracticeRoomController;
 use Illuminate\Support\Facades\Route;
 
 // Admin
-Route::get('/admin/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/admin/login', [AuthController::class, 'login']);
-Route::post('/admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('admin.logout');
 /*Route::get('/chua-dang-nhap', [AuthController::class, function () {
     return view('student.not_log_in');
 }])->name('not.login');*/
