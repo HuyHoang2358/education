@@ -15,9 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('role', ['super_admin', 'admin', 'instructor', 'student', 'parent']);
+            $table->string('password',255);
+            $table->string('google_id', 255)->nullable()->unique();
+            $table->string('facebook_id', 255)->nullable()->unique();
+            $table->boolean('is_lock')->default(0);
+
+            $table->foreignId('role_id')->references('id')->on('roles')->onDelete('restrict')->onUpdate('cascade');
+            // cột role_id tham chiếu đến cột id trong bảng roles nếu xóa role thì user sẽ không bị xóa, nếu role thay đổi thì user sẽ thay đổi theo
             $table->rememberToken();
             $table->timestamps();
         });

@@ -84,20 +84,19 @@
                     <form class="w-full">
                         <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2">
                             <option selected>Năm ra đề</option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="FR">France</option>
-                            <option value="DE">Germany</option>
+                            <option value="US">2019</option>
+                            <option value="CA">2020</option>
+                            <option value="FR">2021</option>
+                            <option value="DE">2022</option>
                         </select>
                     </form>
 
                     <form class="w-full">
                         <select id="countries" class="bg-gray-50 border-2 border-[#0B8493] text-[#0B8493] rounded-full focus:ring-blue-500 focus:border-[#0B8493] block w-full px-4 py-2">
                             <option selected>Loại đề thi</option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="FR">France</option>
-                            <option value="DE">Germany</option>
+                            <option value="US">Trắc nghiệm</option>
+                            <option value="CA">Tu Luan</option>
+                            <option value="FR">Mix</option>
                         </select>
                     </form>
 
