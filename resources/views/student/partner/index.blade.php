@@ -3,7 +3,7 @@
 @section('content')
     <div class="max-w-7xl mx-auto p-4">
         <!-- Breadcrumb -->
-        @include('component.breadcrumb', ['breadcrumbs' => [
+        @include('components.breadcrumb', ['breadcrumbs' => [
             ['name' => 'Thông tin', 'route' => route('home')],
             ['name' => 'Đối tác của chúng tôi', 'route' => route('practice.index')]
         ]])
@@ -11,12 +11,12 @@
         <p class="text-lg text-center text-gray-600">Các đối tác lớn đã và đang hợp tác cùng chúng tôi.</p>
 
         <div class="grid grid-cols-3 gap-8 py-6">
-            <div class="h-40 w-96 bg-gray-300 rounded-2xl"></div>
-            <div class="h-40 w-96 bg-gray-300 rounded-2xl"></div>
-            <div class="h-40 w-96 bg-gray-300 rounded-2xl"></div>
-            <div class="h-40 w-96 bg-gray-300 rounded-2xl"></div>
-            <div class="h-40 w-96 bg-gray-300 rounded-2xl"></div>
-            <div class="h-40 w-96 bg-gray-300 rounded-2xl"></div>
+            <img class="h-40 w-96 rounded-2xl" src="{{asset('assets/img/abroad/partner-1.png')}}" alt="">
+            <img class="h-40 w-96 rounded-2xl" src="{{asset('assets/img/abroad/partner-2.png')}}" alt="">
+            <img class="h-40 w-96 rounded-2xl" src="{{asset('assets/img/abroad/partner-3.png')}}" alt="">
+            <img class="h-40 w-96 rounded-2xl" src="{{asset('assets/img/abroad/partner-4.png')}}" alt="">
+            <img class="h-40 w-96 rounded-2xl" src="{{asset('assets/img/abroad/partner-5.png')}}" alt="">
+            <img class="h-40 w-96 rounded-2xl" src="{{asset('assets/img/abroad/partner-6.png')}}" alt="">
         </div>
     </div>
 @endsection
