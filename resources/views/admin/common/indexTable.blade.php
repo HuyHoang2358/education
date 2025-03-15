@@ -1,6 +1,7 @@
 @php
     $excludedColumns = $excludedColumns ?? ['id', 'created_at', 'updated_at'];
     $columnTranslations = $columnTranslations ?? [];
+    $columnMappings = $columnMappings ?? [];
 @endphp
 <div class="intro-y col-span-12 lg:col-span-12 mt-2">
     <div class="py-2 px-4">
@@ -26,7 +27,9 @@
                                     {{ ($list->currentPage() - 1) * $list->perPage() + $loop->index + 1 }}</td>
                                 @foreach ($item->toArray() as $key => $value)
                                     @if (!in_array($key, $excludedColumns))
-                                        <td>{{ $value }}</td>
+                                        <td>
+                                            {{ isset($columnMappings[$key]) ? data_get($item, $columnMappings[$key]) : $value }}
+                                        </td>
                                     @endif
                                 @endforeach
                                 <td>

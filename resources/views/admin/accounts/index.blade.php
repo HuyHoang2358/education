@@ -26,10 +26,14 @@
         <!-- BEGIN: HTML Table Data -->
         @include('admin.common.indexTable', [
             'list' => $users,
-            'excludedColumns' => ['id', 'created_at', 'updated_at', 'password', 'google_id', 'facebook_id', 'is_lock', 'role_id'],
+            'excludedColumns' => ['id', 'created_at', 'updated_at', 'password', 'google_id', 'facebook_id', 'is_lock'],
             'columnTranslations' => [
                 'name' => 'Tên người dùng',
+                'role_id' => 'Vai trò'
             ],
+            'columnMappings' => [
+                'role_id' => 'role.name',
+            ]
         ])
     </div>
 @endsection

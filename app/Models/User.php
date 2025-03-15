@@ -42,9 +42,9 @@ class User extends Authenticatable
         return $this->hasOne(Profile::class);
     }
 
-    public function role(): HasOne {
+    public function role(){
 
-        return $htis->hasOne(Role::class);
+        return $this->belongsTo(Role::class);
 
     }
 }
