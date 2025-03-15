@@ -256,73 +256,7 @@
             </div>
         </div>
     </div>
-@endsection
 
-@section('scripts')
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var swiper = new Swiper(".mySwiper", {
-                loop: true,
-                // autoplay: {
-                //     delay: 5000, // Tự động chuyển sau 3s
-                //     disableOnInteraction: false,
-                // },
-                // navigation: {
-                //     nextEl: ".swiper-button-next",
-                //     prevEl: ".swiper-button-prev",
-                // },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-
-            var swiper = new Swiper(".mySwiper2", {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                navigation: {
-                    nextEl: ".swiper-button-next-unique",
-                    prevEl: ".swiper-button-prev-unique",
-                },
-                pagination: {
-                    el: ".swiper-pagination-2",
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    },
-                    1049: {
-                        slidesPerView: 4,
-                        spaceBetween: 24,
-                    },
-                },
-            });
-
-            var swiper = new Swiper(".mySwiper3", {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: ".swiper-button-next-unique-2",
-                    prevEl: ".swiper-button-prev-unique-2",
-                },
-                pagination: {
-                    el: ".swiper-pagination-3",
-                    clickable: true,
-                },
-                breakpoints: {
-                    1049: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                    },
-                },
-            });
-        });
-    </script>
+    <script src="{{ asset('assets/js/components/main_page_swiper.js') }}"></script>
 @endsection
 
