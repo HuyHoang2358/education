@@ -1,6 +1,12 @@
 <header id="sticky-header" class="bg-[#124D59] text-white z-50 sticky top-0 transition-transform">
     <div class="container mx-auto flex items-center justify-between px-6">
-        <img src="{{asset('/assets/img/home/LOGO.png')}}" alt="">
+        <div class="flex items-center gap-3 my-2">
+            <img class="w-[60px] h-[60px] rounded-full border-2 border-white" src="{{asset('/assets/img/home/brand.png')}}" alt="">
+            <div>
+                <h4 class="text-3xl font-bold tracking-widest">Ôn thi 360</h4>
+                <p class="text-sm">Ôn sớm học sâu điểm thi nhất khối</p>
+            </div>
+        </div>
         <div class="flex items-center gap-8 h-full">
 
             <a href="{{ route('home') }}" class="{{ Route::currentRouteName() == 'home' ? 'bg-orange-500 text-white font-medium rounded-full py-2 px-3 hover:text-white' : 'relative hover:cursor-pointer group font-medium py-5 hover:text-orange-400' }}">

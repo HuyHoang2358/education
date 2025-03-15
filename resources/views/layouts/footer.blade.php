@@ -1,9 +1,15 @@
-<footer class="bg-teal-900 text-white py-8 px-20 md:px-32 ">
+<footer class="bg-teal-900 text-white py-8 px-10 md:px-20 ">
     <div class="grid grid-cols-2">
-       <div class="flex gap-10">
-            <div>
-                <p class="p-12 rounded-full bg-red-400">Logo</p>
-            </div>
+       <div class="flex gap-16">
+           <div>
+               <div class="w-full flex justify-center mb-3">
+                   <img class="w-[60px] h-[60px] rounded-full border-2 border-white" src="{{asset('/assets/img/home/brand.png')}}" alt="">
+               </div>
+               <div>
+                   <h4 class="text-3xl font-bold tracking-widest text-center">Ôn thi 360</h4>
+                   <p class="text-sm">Ôn sớm học sâu điểm thi nhất khối</p>
+               </div>
+           </div>
            <div>
                <h4 class="text-xl font-bold">TÊN CÔNG TY</h4>
                <P>Công ty TNHH Tên Công Ty</P>
