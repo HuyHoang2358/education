@@ -1,5 +1,5 @@
 @extends('layouts.web')
-@section('title', 'Luyện tập')
+@section('title', 'Du học')
 @section('content')
     <div class="max-w-7xl mx-auto pt-4">
         <!-- Breadcrumb -->
@@ -107,6 +107,7 @@
                     <img src="{{asset('assets/img/abroad/cam-2.png')}}" alt="">
                 </div>
             </div>
+
             <div>
                 <h1 class="text-4xl font-semibold pt-12">Chúng tôi hỗ trợ bạn toàn diện trên hành trình du học</h1>
                 <p class="text-xl text-gray-600 pt-6">Chúng tôi cam kết đồng hành cùng bạn từ những bước đầu tiên. Từ việc lựa chọn trường, ngành học phù hợp đến thủ tục xin visa, tìm kiếm học bổng và định cư tại đất nước mới, chúng tôi sẽ hỗ trợ bạn mọi lúc mọi nơi.</p>

@@ -13,6 +13,7 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PracticeRoomController;
 use App\Http\Controllers\SurveyController;
+use App\Http\Controllers\WarningController;
 use Illuminate\Support\Facades\Route;
 
 // Admin
@@ -51,5 +52,8 @@ Route::get('/khao-sat-first', [SurveyController::class, 'first'])->name('survey.
 Route::get('/khao-sat-second', [SurveyController::class, 'second'])->name('survey.second');
 Route::get('/khao-sat-third', [SurveyController::class, 'third'])->name('survey.third');
 Route::get('/khao-sat-fourth', [SurveyController::class, 'fourth'])->name('survey.fourth');
+
+Route::get('/warning', [WarningController::class, 'index'])->name('survey.index');
+
 
 
