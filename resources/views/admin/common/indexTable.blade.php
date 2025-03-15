@@ -24,8 +24,11 @@
                             <tr>
                                 <td class="text-center">
                                     {{ ($list->currentPage() - 1) * $list->perPage() + $loop->index + 1 }}</td>
-                                <td class="">{{ $item->name }}</td>
-                                <td>{{ $item->description }}</td>
+                                @foreach ($item->toArray() as $key => $value)
+                                    @if (!in_array($key, $excludedColumns))
+                                        <td>{{ $value }}</td>
+                                    @endif
+                                @endforeach
                                 <td>
                                     <div class="flex gap-2 justify-center items-center">
                                         <!-- Edit button -->
@@ -36,8 +39,7 @@
                                         <!-- Delete button -->
                                         <button data-tw-toggle="modal" type="button"
                                             class="btn btn-outline-danger p-1 w-8 h-8"
-                                            data-tw-target="#delete-object-confirm-form"
-                                        >
+                                            data-tw-target="#delete-object-confirm-form">
                                             <i data-lucide="trash-2"></i>
                                         </button>
                                     </div>
