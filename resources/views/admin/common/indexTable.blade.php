@@ -16,7 +16,9 @@
                                     {{ $columnTranslations[$header] ?? ucfirst(str_replace('_', ' ', $header)) }}</th>
                             @endif
                         @endforeach
-                        <th class="whitespace-nowrap w-8">Hành động</th>
+                        @if(isset($needAction) && $needAction)
+                            <th class="whitespace-nowrap w-8">Hành động</th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -28,25 +30,27 @@
                                 @foreach ($item->toArray() as $key => $value)
                                     @if (!in_array($key, $excludedColumns))
                                         <td>
-                                            {{ isset($columnMappings[$key]) ? data_get($item, $columnMappings[$key]) : $value }}
+                                            {{ isset($columnMappings[$key]) ? data_get($item, $columnMappings[$key], 'N/A') : $value }}
                                         </td>
                                     @endif
                                 @endforeach
-                                <td>
-                                    <div class="flex gap-2 justify-center items-center">
-                                        <!-- Edit button -->
-                                        <a href="">
-                                            <button type="button" class="btn btn-outline-warning p-1 w-8 h-8"> <i
-                                                    data-lucide="edit-3"></i></button>
-                                        </a>
-                                        <!-- Delete button -->
-                                        <button data-tw-toggle="modal" type="button"
-                                            class="btn btn-outline-danger p-1 w-8 h-8"
-                                            data-tw-target="#delete-object-confirm-form">
-                                            <i data-lucide="trash-2"></i>
-                                        </button>
-                                    </div>
-                                </td>
+                                @if(isset($needAction) && $needAction)
+                                    <td>
+                                        <div class="flex gap-2 justify-center items-center">
+                                            <!-- Edit button -->
+                                            <a href="">
+                                                <button type="button" class="btn btn-outline-warning p-1 w-8 h-8"> <i
+                                                        data-lucide="edit-3"></i></button>
+                                            </a>
+                                            <!-- Delete button -->
+                                            <button data-tw-toggle="modal" type="button"
+                                                class="btn btn-outline-danger p-1 w-8 h-8"
+                                                data-tw-target="#delete-object-confirm-form">
+                                                <i data-lucide="trash-2"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                @endif
                             </tr>
                         @endforeach
                     @else
