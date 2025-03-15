@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AbroadController;
-use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContestController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\DashboardController as StudentDashboardController;
 use App\Http\Controllers\Admin\ExamController;
 use App\Http\Controllers\ExerciseController;
@@ -32,8 +34,10 @@ Route::prefix('admin')->group(function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('exams', ExamController::class);
     Route::resource('contests', ContestController::class);
-    Route::get('fileConfig', function () {
-        return view('admin.media.index');
+    Route::resource('role', RoleController::class);
+    Route::resource('account', AccountController::class);
+    Route::get('image-manager', function () {
+        return view('admin.media.index', ['page' => 'manage-image']);
     })->name('admin.media.image');
 });
 
