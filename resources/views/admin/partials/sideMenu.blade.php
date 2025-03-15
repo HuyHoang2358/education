@@ -14,9 +14,15 @@
             'page' => isset($page) ? $page : '',
             'pageTags' => [
                 [
+                    'manage-user' => [
+                        'display' => 'Quản lý người dùng',
+                        'icon' => 'users',
+                    ],
+                ],
+                [
                     'manage-account' => [
                         'display' => 'Quản lý tài khoản',
-                        'icon' => 'users',
+                        'icon' => 'user',
                         'route' => 'account.index',
                     ],
                 ],
@@ -31,7 +37,6 @@
                     'manage-permission' => [
                         'display' => 'Quản lý quyền',
                         'icon' => 'key',
-                        'route' => '',
                     ],
                 ],
             ],
@@ -45,28 +50,24 @@
                     'manage-category' => [
                         'display' => 'Quản lý danh mục',
                         'icon' => 'folder',
-                        'route' => '',
                     ],
                 ],
                 [
                     'manage-specility' => [
                         'display' => 'Quản lý chuyên đề',
                         'icon' => 'star',
-                        'route' => '',
                     ],
                 ],
                 [
                     'manage-subject' => [
                         'display' => 'Quản lý môn học',
                         'icon' => 'book',
-                        'route' => '',
                     ],
                 ],
                 [
                     'manage-tags' => [
                         'display' => 'Quản lý tags',
                         'icon' => 'tag',
-                        'route' => '',
                     ],
                 ],
             ],
@@ -80,42 +81,36 @@
                     'manage-data' => [
                         'display' => 'Quản lý dữ liệu',
                         'icon' => 'database',
-                        'route' => '',
                     ],
                 ],
                 [
                     'question-bank' => [
                         'display' => 'Ngân hàng câu hỏi',
                         'icon' => 'briefcase',
-                        'route' => '',
                     ],
                 ],
                 [
                     'survey' => [
                         'display' => 'Khảo sát khách hàng',
                         'icon' => 'file-text',
-                        'route' => '',
                     ],
                 ],
                 [
                     'manage-class' => [
                         'display' => 'Quản lý lớp học',
                         'icon' => 'codepen',
-                        'route' => '',
                     ],
                 ],
                 [
                     'manage-contest' => [
                         'display' => 'Quản lý cuộc thi',
                         'icon' => 'activity',
-                        'route' => '',
                     ],
                 ],
                 [
                     'manage-abroad' => [
                         'display' => 'Quản lý du học',
                         'icon' => 'framer',
-                        'route' => '',
                     ],
                 ]
             ],
@@ -129,7 +124,6 @@
                     'manage-media' => [
                         'display' => 'Quản lý media',
                         'icon' => 'tablet',
-                        'route' => ''
                     ],
                 ],
                 [
@@ -162,14 +156,13 @@
                     'manage-partner' => [
                         'display' => 'Quản lý đối tác',
                         'icon' => 'aperture',
-                        'route' => ''
                     ],
                 ],
                 [
                     'manage-district' => [
                         'display' => 'Danh sách tỉnh, thành phố',
                         'icon' => 'anchor',
-                        'route' => 'admin.media.image',
+                        'route' => 'admin.provinces'
                     ],
                 ],
                 [
